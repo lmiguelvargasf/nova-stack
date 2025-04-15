@@ -1,0 +1,17 @@
+[project]
+name = "freya-backend"
+version = "0.1.0"
+description = "Backend for Freya"
+readme = "README.md"
+authors = [
+    { name = "M", email = "lmiguelvargasf@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = []
+
+[project.scripts]
+freya-backend = "freya_backend:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
