@@ -16,6 +16,17 @@ wheels = [
 ]
 
 [[package]]
+name = "app"
+version = "0.1.0"
+source = { editable = "." }
+dependencies = [
+    { name = "litestar", extra = ["standard"] },
+]
+
+[package.metadata]
+requires-dist = [{ name = "litestar", extras = ["standard"], specifier = ">=2.15.2" }]
+
+[[package]]
 name = "certifi"
 version = "2025.1.31"
 source = { registry = "https://pypi.org/simple" }
@@ -88,17 +99,6 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/0a/e3/21bc18edc003b54a2069eb854b9f92cacb5acc99e03c609487a23a673755/fast_query_parsers-1.0.3-cp38-abi3-win32.whl", hash = "sha256:14b3fab7e9a6ac1c1efaf66c3fd2a3fd1e25ede03ed14118035e530433830a11", size = 646366 },
     { url = "https://files.pythonhosted.org/packages/ae/4b/07fe4d7b5c458bdde9b0bfd8e8cb5762341af6c9727b43c2331c0cb0dbc3/fast_query_parsers-1.0.3-cp38-abi3-win_amd64.whl", hash = "sha256:21ae5f3a209aee7d3b84bdcdb33dd79f39fc8cb608b3ae8cfcb78123758c1a16", size = 689717 },
 ]
-
-[[package]]
-name = "freya-backend"
-version = "0.1.0"
-source = { editable = "." }
-dependencies = [
-    { name = "litestar", extra = ["standard"] },
-]
-
-[package.metadata]
-requires-dist = [{ name = "litestar", extras = ["standard"], specifier = ">=2.15.2" }]
 
 [[package]]
 name = "h11"

@@ -1,5 +1,5 @@
 [project]
-name = "freya-backend"
+name = "app"
 version = "0.1.0"
 description = "Backend for Freya"
 readme = "README.md"
@@ -10,9 +10,6 @@ requires-python = ">=3.13"
 dependencies = [
     "litestar[standard]>=2.15.2",
 ]
-
-[project.scripts]
-freya-backend = "freya_backend:main"
 
 [build-system]
 requires = ["hatchling"]
