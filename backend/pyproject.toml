@@ -11,6 +11,7 @@ dependencies = [
     "litestar[standard]>=2.15.2",
     "piccolo-admin>=1.9.1",
     "piccolo[postgres]>=1.24.2",
+    "pydantic-settings>=2.8.1",
 ]
 
 [build-system]
