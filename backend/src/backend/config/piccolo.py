@@ -2,7 +2,7 @@ from piccolo.engine.postgres import PostgresEngine
 
 from piccolo.conf.apps import AppRegistry
 
-from .config import settings
+from .base import settings
 
 DB = PostgresEngine(
     config={
