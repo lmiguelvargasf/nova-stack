@@ -15,9 +15,9 @@ RUN --mount=type=cache,target=/root/.cache/uv \
 
 ENV PATH="/app/.venv/bin:$PATH"
 
-# Create a non-root user with proper home directory
+# Create a non-root user with proper home directory and shell
 RUN addgroup --system app && \
-    adduser --system --group --home /home/app app && \
+    adduser --system --shell /bin/bash --group --home /home/app app && \
     mkdir -p /home/app/.cache && \
     chown -R app:app /app /home/app
 
