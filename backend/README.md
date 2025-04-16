@@ -1,11 +1,11 @@
-# app
+# Freya Backend
 
 Backend for Freya (part of a monorepo).
 
 ## Prerequisites
 
-- Python >=3.13
-- [uv][] (for environment and package management)
+- [uv][]: Environment and package management
+- [PostgreSQL][]: Database system
 
 ## Setup
 
@@ -27,6 +27,20 @@ Copy the example environment file:
 cp .env-example .env
 ```
 
+**Database Setup:**
+
+Create the database:
+
+```bash
+PGPASSWORD=postgres psql -U postgres -h localhost -c "CREATE DATABASE freya;"
+```
+
+Run migrations:
+
+```bash
+uv run --env-file .env piccolo migrations forward all
+```
+
 ## Running the Application
 
 To run the development server:
@@ -38,3 +52,4 @@ uv run --env-file .env litestar run
 The server will be available at `http://127.0.0.1:8000`.
 
 [uv]: https://docs.astral.sh/uv/
+[PostgreSQL]: https://www.postgresql.org/

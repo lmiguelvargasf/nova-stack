@@ -1,5 +1,5 @@
 [project]
-name = "app"
+name = "backend"
 version = "0.1.0"
 description = "Backend for Freya"
 readme = "README.md"
@@ -9,6 +9,9 @@ authors = [
 requires-python = ">=3.13"
 dependencies = [
     "litestar[standard]>=2.15.2",
+    "piccolo-admin>=1.9.1",
+    "piccolo[postgres]>=1.24.2",
+    "pydantic-settings>=2.8.1",
 ]
 
 [build-system]
