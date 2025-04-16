@@ -4,7 +4,6 @@ Backend for Freya (part of a monorepo).
 
 ## Prerequisites
 
-- Python >=3.13
 - [uv][] (for environment and package management)
 
 ## Setup
