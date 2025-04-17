@@ -37,8 +37,8 @@ Docker Compose is used to orchestrate the backend service and its database.
 
 1. Copy the example environment files, then **edit `/.env` and `backend/.env`** to set your necessary secrets and configuration:
    ```bash
-   cp .env-example .env
-   cp backend/.env-example backend/.env
+   cp .env.example .env
+   cp backend/.env.example backend/.env
    ```
 
 2. Build and start services:
