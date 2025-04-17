@@ -18,13 +18,39 @@ A modern financial application to track spending, organize transactions, and vis
 ## Getting Started
 
 ### Prerequisites
-- Python 3.13
-- Node.js 22+
-- PostgreSQL 17
-- pnpm
+
+The easiest way to get the required Docker environment is by installing **[Docker Desktop][docker-desktop]**, which includes both Docker Engine and Docker Compose.
+
+Alternatively, if you install the components separately:
+- **Docker Engine:** Version 28 or later. [Install Docker Engine](https://docs.docker.com/engine/install/)
+- **Docker Compose:** Version 2 (V2) or later. If you installed Docker Engine separately, you might need to [install the Compose plugin](https://docs.docker.com/compose/install/linux/#install-the-plugin-manually).
+
+You can verify your installation by running:
+```bash
+docker --version
+docker compose version
+```
 
 ### Backend Setup
-...
+
+We use Docker Compose to orchestrate the backend service and its database.
+
+1. Copy the example environment files, then **edit `/.env` and `backend/.env`** to set your necessary secrets and configuration:
+   ```bash
+   cp .env-example .env
+   cp backend/.env-example backend/.env
+   ```
+
+2. Build and start services:
+   ```bash
+   docker compose up --build
+   ```
+3. The backend API will be available at http://localhost:8000, and the Piccolo admin UI at http://localhost:8000/admin/.
+
+4. To stop and remove containers:
+   ```bash
+   docker compose down
+   ```
 
 ### Frontend Setup
 ...
@@ -36,11 +62,9 @@ A modern financial application to track spending, organize transactions, and vis
 ## License
 MIT
 
-## References
-- **Litestar**: https://litestar.dev/
-- **Piccolo**: https://piccolo-orm.com/
-- **PostgreSQL**: https://www.postgresql.org/
 
+[docker-desktop]: https://www.docker.com/products/docker-desktop/
 [litestar]: https://litestar.dev/
 [piccolo]: https://piccolo-orm.com/
 [postgresql]: https://www.postgresql.org/
+
