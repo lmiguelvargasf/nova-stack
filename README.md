@@ -53,8 +53,28 @@ Docker Compose is used to orchestrate the backend service and its database.
    ```
 
 ### Frontend Setup
-...
 
+1. Copy the example environment file and update if needed:
+   ```bash
+   cp frontend/.env.example frontend/.env.local
+   ```
+
+2. Install dependencies:
+   ```bash
+   cd frontend
+   npm install
+   # or
+   pnpm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   # or
+   pnpm dev
+   ```
+
+4. The frontend application will be available at http://localhost:3000.
 
 ## Deployment
 ...
