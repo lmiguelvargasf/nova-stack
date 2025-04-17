@@ -67,4 +67,3 @@ MIT
 [litestar]: https://litestar.dev/
 [piccolo]: https://piccolo-orm.com/
 [postgresql]: https://www.postgresql.org/
-
