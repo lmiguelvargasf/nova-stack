@@ -5,15 +5,16 @@ A modern financial application to track spending, organize transactions, and vis
 ## Tech Stack
 
 ### Backend
+- **[Python][python]** - Core programming language for backend.
 - **[Litestar][litestar]** - High-performance ASGI framework for modern Python web apps.
-- **[PostgreSQL][postgresql]** - Robust relational database for data storage.
 - **[Piccolo][piccolo]** - Async ORM and query builder with migration support.
+- **[PostgreSQL][postgresql]** - Advanced open-source relational database known for reliability.
 
 ### Frontend
-- **Next.js** - React framework for production-ready applications
-- **TypeScript** - Static typing for improved development experience
-- **Tailwind CSS** - Utility-first CSS framework for rapid UI development
-- **Chart.js** - Simple yet flexible JavaScript charting library
+- **[TypeScript][typescript]** - Core language for frontend, adding static types to JavaScript.
+- **[Next.js][nextjs]** - React framework for production-ready applications
+- **[Tailwind CSS][tailwind]** - Utility-first CSS framework for rapid UI development
+- **[Chart.js][chartjs]** - Simple yet flexible JavaScript charting library
 
 ## Getting Started
 
@@ -31,30 +32,33 @@ docker --version
 docker compose version
 ```
 
-### Backend Setup
+### Environment Setup
 
-Docker Compose is used to orchestrate the backend service and its database.
-
-1. Copy the example environment files, then **edit `/.env` and `backend/.env`** to set your necessary secrets and configuration:
+1. Copy the example environment files:
    ```bash
-   cp .env-example .env
-   cp backend/.env-example backend/.env
+   cp .env.example .env
+   cp backend/.env.example backend/.env
+   cp frontend/.env.local.example frontend/.env.local
    ```
 
-2. Build and start services:
+2. Edit the environment files (`.env`, `backend/.env`, and `frontend/.env.local`) to set your necessary secrets and configuration.
+
+### Starting the Application
+
+1. Build and start all services:
    ```bash
    docker compose up --build
    ```
-3. The backend API will be available at http://localhost:8000, and the Piccolo admin UI at http://localhost:8000/admin/.
 
-4. To stop and remove containers:
+2. The services will be available at:
+   - Frontend: http://localhost:3000
+   - Backend API: http://localhost:8000
+   - Piccolo admin UI: http://localhost:8000/admin/
+
+3. To stop and remove containers:
    ```bash
    docker compose down
    ```
-
-### Frontend Setup
-...
-
 
 ## Deployment
 ...
@@ -63,8 +67,12 @@ Docker Compose is used to orchestrate the backend service and its database.
 MIT
 
 
+[chartjs]: https://www.chartjs.org/
 [docker-desktop]: https://www.docker.com/products/docker-desktop/
 [litestar]: https://litestar.dev/
+[nextjs]: https://nextjs.org/
 [piccolo]: https://piccolo-orm.com/
 [postgresql]: https://www.postgresql.org/
-
+[python]: https://www.python.org/
+[tailwind]: https://tailwindcss.com/
+[typescript]: https://www.typescriptlang.org/

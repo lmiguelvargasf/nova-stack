@@ -13,4 +13,4 @@ RUN --mount=type=cache,target=/root/.cache/uv \
 
 ENV PATH="/app/.venv/bin:$PATH"
 
-ENTRYPOINT ["sh", "/app/entrypoint.sh"]
+CMD ["sh", "/app/entrypoint.sh"]
