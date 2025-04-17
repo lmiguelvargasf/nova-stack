@@ -33,7 +33,7 @@ docker compose version
 
 ### Backend Setup
 
-We use Docker Compose to orchestrate the backend service and its database.
+Docker Compose is used to orchestrate the backend service and its database.
 
 1. Copy the example environment files, then **edit `/.env` and `backend/.env`** to set your necessary secrets and configuration:
    ```bash
