@@ -5,6 +5,7 @@ A modern financial application to track spending, organize transactions, and vis
 ## Tech Stack
 
 ### Backend
+- **[Python][python]** - The core backend language
 - **[Litestar][litestar]** - High-performance ASGI framework for modern Python web apps.
 - **[PostgreSQL][postgresql]** - Robust relational database for data storage.
 - **[Piccolo][piccolo]** - Async ORM and query builder with migration support.
@@ -72,5 +73,6 @@ MIT
 [nextjs]: https://nextjs.org/
 [piccolo]: https://piccolo-orm.com/
 [postgresql]: https://www.postgresql.org/
+[python]: https://www.python.org/
 [tailwind]: https://tailwindcss.com/
 [typescript]: https://www.typescriptlang.org/
