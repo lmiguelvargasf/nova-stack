@@ -25,12 +25,13 @@ async def close_database_connection_pool():
     except Exception:
         print("Unable to connect to the database")
 
-@get("/")
-async def get_root() -> str:
-    return "Hello, World!"
+
+@get("/health")
+async def health() -> dict[str, str]:
+    return {"status": "ok"}
 
 app = Litestar(
-    route_handlers=[admin, get_root],
+    route_handlers=[admin, health],
     on_startup=[open_database_connection_pool],
     on_shutdown=[close_database_connection_pool],
 )
