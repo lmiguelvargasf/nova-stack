@@ -3,7 +3,6 @@ services:
     build:
       context: ./backend
     container_name: "backend"
-    command: ["/bin/sh", "-c", "uv run piccolo migrations forward all && uv run litestar run"]
     env_file:
       - .env
       - ./backend/.env
