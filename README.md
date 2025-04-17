@@ -51,9 +51,9 @@ docker compose version
    ```
 
 2. The services will be available at:
-   - Frontend: http://localhost:3000
-   - Backend API: http://localhost:8000
-   - Piccolo admin UI: http://localhost:8000/admin/
+   - Frontend Application: http://localhost:3000
+   - Backend Admin UI: http://localhost:8000/admin/
+   - Backend Health Check: http://localhost:8000/health
 
 3. To stop and remove containers:
    ```bash
