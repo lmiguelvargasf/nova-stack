@@ -31,50 +31,33 @@ docker --version
 docker compose version
 ```
 
-### Backend Setup
+### Environment Setup
 
-Docker Compose is used to orchestrate the backend service and its database.
-
-1. Copy the example environment files, then **edit `/.env` and `backend/.env`** to set your necessary secrets and configuration:
+1. Copy the example environment files:
    ```bash
    cp .env.example .env
    cp backend/.env.example backend/.env
+   cp frontend/.env.local.example frontend/.env.local
    ```
 
-2. Build and start services:
+2. Edit the environment files (`.env`, `backend/.env`, and `frontend/.env.local`) to set your necessary secrets and configuration.
+
+### Starting the Application
+
+1. Build and start all services (backend, frontend, and database):
    ```bash
    docker compose up --build
    ```
-3. The backend API will be available at http://localhost:8000, and the Piccolo admin UI at http://localhost:8000/admin/.
 
-4. To stop and remove containers:
+2. The services will be available at:
+   - Frontend: http://localhost:3000
+   - Backend API: http://localhost:8000
+   - Piccolo admin UI: http://localhost:8000/admin/
+
+3. To stop and remove containers:
    ```bash
    docker compose down
    ```
-
-### Frontend Setup
-
-1. Copy the example environment file and update if needed:
-   ```bash
-   cp frontend/.env.example frontend/.env.local
-   ```
-
-2. Install dependencies:
-   ```bash
-   cd frontend
-   npm install
-   # or
-   pnpm install
-   ```
-
-3. Start the development server:
-   ```bash
-   npm run dev
-   # or
-   pnpm dev
-   ```
-
-4. The frontend application will be available at http://localhost:3000.
 
 ## Deployment
 ...
