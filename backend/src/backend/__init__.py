@@ -1,5 +1,6 @@
 from litestar import Litestar, get, asgi
 from litestar.types import Receive, Scope, Send
+from pydantic import BaseModel
 from piccolo.engine import engine_finder
 from piccolo_admin.endpoints import create_admin, BaseUser
 
@@ -26,12 +27,17 @@ async def close_database_connection_pool():
         print("Unable to connect to the database")
 
 
+class HealthStatus(BaseModel):
+    status: str
+
+
 @get("/health")
-async def health() -> dict[str, str]:
-    return {"status": "ok"}
+async def health_check() -> HealthStatus:
+    return HealthStatus(status="ok")
+
 
 app = Litestar(
-    route_handlers=[admin, health],
+    route_handlers=[admin, health_check],
     on_startup=[open_database_connection_pool],
     on_shutdown=[close_database_connection_pool],
 )
