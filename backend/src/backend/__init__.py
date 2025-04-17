@@ -7,7 +7,7 @@ from .db import open_database_connection_pool, close_database_connection_pool
 
 
 @asgi("/admin/", is_mount=True, copy_scope=False)
-async def admin(scope: "Scope", receive: "Receive", send: "Send") -> None:
+async def admin(scope: Scope, receive: Receive, send: Send) -> None:
     await create_admin(tables=[BaseUser])(scope, receive, send)
 
 
@@ -22,7 +22,6 @@ async def health_check() -> HealthStatus:
 
 app = Litestar(
     route_handlers=[admin, health_check],
-    # Reference the imported functions
     on_startup=[open_database_connection_pool],
     on_shutdown=[close_database_connection_pool],
 )
