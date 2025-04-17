@@ -66,11 +66,11 @@ docker compose version
 MIT
 
 
+[chartjs]: https://www.chartjs.org/
 [docker-desktop]: https://www.docker.com/products/docker-desktop/
 [litestar]: https://litestar.dev/
+[nextjs]: https://nextjs.org/
 [piccolo]: https://piccolo-orm.com/
 [postgresql]: https://www.postgresql.org/
-[nextjs]: https://nextjs.org/
-[typescript]: https://www.typescriptlang.org/
 [tailwind]: https://tailwindcss.com/
-[chartjs]: https://www.chartjs.org/
+[typescript]: https://www.typescriptlang.org/
