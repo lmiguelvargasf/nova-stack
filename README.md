@@ -10,10 +10,10 @@ A modern financial application to track spending, organize transactions, and vis
 - **[Piccolo][piccolo]** - Async ORM and query builder with migration support.
 
 ### Frontend
-- **Next.js** - React framework for production-ready applications
-- **TypeScript** - Static typing for improved development experience
-- **Tailwind CSS** - Utility-first CSS framework for rapid UI development
-- **Chart.js** - Simple yet flexible JavaScript charting library
+- **[Next.js][nextjs]** - React framework for production-ready applications
+- **[TypeScript][typescript]** - Static typing for improved development experience
+- **[Tailwind CSS][tailwind]** - Utility-first CSS framework for rapid UI development
+- **[Chart.js][chartjs]** - Simple yet flexible JavaScript charting library
 
 ## Getting Started
 
@@ -70,3 +70,7 @@ MIT
 [litestar]: https://litestar.dev/
 [piccolo]: https://piccolo-orm.com/
 [postgresql]: https://www.postgresql.org/
+[nextjs]: https://nextjs.org/
+[typescript]: https://www.typescriptlang.org/
+[tailwind]: https://tailwindcss.com/
+[chartjs]: https://www.chartjs.org/
