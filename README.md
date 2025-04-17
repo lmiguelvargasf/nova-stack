@@ -5,14 +5,14 @@ A modern financial application to track spending, organize transactions, and vis
 ## Tech Stack
 
 ### Backend
-- **[Python][python]** - The core backend language
+- **[Python][python]** - Core programming language for backend.
 - **[Litestar][litestar]** - High-performance ASGI framework for modern Python web apps.
-- **[PostgreSQL][postgresql]** - Robust relational database for data storage.
 - **[Piccolo][piccolo]** - Async ORM and query builder with migration support.
+- **[PostgreSQL][postgresql]** - Advanced open-source relational database known for reliability.
 
 ### Frontend
+- **[TypeScript][typescript]** - Core language for frontend, adding static types to JavaScript.
 - **[Next.js][nextjs]** - React framework for production-ready applications
-- **[TypeScript][typescript]** - Static typing for improved development experience
 - **[Tailwind CSS][tailwind]** - Utility-first CSS framework for rapid UI development
 - **[Chart.js][chartjs]** - Simple yet flexible JavaScript charting library
 
