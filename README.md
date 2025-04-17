@@ -44,7 +44,7 @@ docker compose version
 
 ### Starting the Application
 
-1. Build and start all services (backend, frontend, and database):
+1. Build and start all services:
    ```bash
    docker compose up --build
    ```
