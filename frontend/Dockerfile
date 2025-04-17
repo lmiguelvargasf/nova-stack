@@ -7,4 +7,4 @@ COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 RUN pnpm install
 COPY . .
 
-CMD ["pnpm", "run", "dev", "--", "--hostname", "0.0.0.0"]
+CMD ["pnpm", "run", "dev", "--hostname", "0.0.0.0"]
