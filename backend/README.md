@@ -1,6 +1,6 @@
 # Freya Backend
 
-This service is containerized via Docker Compose—see the [project root README](../README.md) for setup and running instructions.
+This service is containerized via Docker Compose. See the [project root README](../README.md) for setup and running instructions.
 
 ## Access Backend
 
