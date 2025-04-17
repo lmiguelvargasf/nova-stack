@@ -3,7 +3,7 @@ from loguru import logger
 
 
 async def open_database_connection_pool():
-    """Starts the Piccolo database connection pool."""
+    """Start database connection pool."""
     try:
         engine = engine_finder()
         await engine.start_connection_pool()
@@ -14,7 +14,7 @@ async def open_database_connection_pool():
 
 
 async def close_database_connection_pool():
-    """Closes the Piccolo database connection pool."""
+    """Close database connection pool."""
     try:
         engine = engine_finder()
         await engine.close_connection_pool()
