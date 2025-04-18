@@ -15,7 +15,7 @@ class TestBaseUser(AsyncTableTest):
 
     async def test_create_user(self):
         """Test creating a user and retrieving it"""
-        test_username = "testuser"
+        test_username = "test@example.com"
         test_password = "TestPassword123"
 
         user = await BaseUser.create_user(
