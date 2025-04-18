@@ -32,7 +32,7 @@ This project uses [pytest][] for testing.
 Run tests using pytest with the test database configuration:
 
 ```bash
-PICCOLO_CONF=backend.config.piccolo_test pytest
+PICCOLO_CONF=backend.config.piccolo_test uv run pytest
 ```
 
 [pytest]: https://docs.pytest.org/
