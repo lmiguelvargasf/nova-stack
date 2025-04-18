@@ -13,8 +13,7 @@ from piccolo_admin.endpoints import BaseUser
 class TestBaseUser(AsyncTableTest):
     tables: ClassVar[list] = [BaseUser]
 
-    async def test_create_user(self):
-        """Test creating a user and retrieving it"""
+    async def test_create_user(self) -> None:
         test_username = "test@example.com"
         test_password = "TestPassword123"
 
