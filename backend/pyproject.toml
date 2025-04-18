@@ -23,3 +23,11 @@ build-backend = "hatchling.build"
 dev = [
     "ruff>=0.11.6",
 ]
+
+[tool.ruff]
+line-length = 88
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "B", "I", "UP", "RUF"]
+ignore = ["E501"]
