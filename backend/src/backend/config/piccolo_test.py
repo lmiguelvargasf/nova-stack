@@ -2,7 +2,6 @@ from piccolo.engine.postgres import PostgresEngine
 
 from .base import settings
 
-
 DB = PostgresEngine(
     config={
         "database": settings.postgres_test_db,
