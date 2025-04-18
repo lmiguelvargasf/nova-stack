@@ -1,9 +1,9 @@
-from litestar import Litestar, get, asgi
+from litestar import Litestar, asgi, get
 from litestar.types import Receive, Scope, Send
+from piccolo_admin.endpoints import BaseUser, create_admin
 from pydantic import BaseModel
-from piccolo_admin.endpoints import create_admin, BaseUser
 
-from .db import open_database_connection_pool, close_database_connection_pool
+from .db import close_database_connection_pool, open_database_connection_pool
 
 
 @asgi("/admin/", is_mount=True, copy_scope=False)

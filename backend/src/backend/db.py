@@ -1,5 +1,5 @@
-from piccolo.engine import engine_finder
 from loguru import logger
+from piccolo.engine import engine_finder
 
 
 async def open_database_connection_pool():
