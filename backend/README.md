@@ -29,7 +29,7 @@ uv run ruff format --force-exclude
 
 This project uses [pytest][] for testing.
 
-Run tests using pytest with the test database configuration:
+Run tests using `pytest` with the test database configuration:
 
 ```bash
 PICCOLO_CONF=backend.config.piccolo_test uv run pytest
