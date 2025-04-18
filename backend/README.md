@@ -25,4 +25,15 @@ Run `ruff`'s formatter.
 uv run ruff format --force-exclude
 ```
 
+## Testing
+
+This project uses [pytest][] for testing.
+
+Run tests using pytest with the test database configuration:
+
+```bash
+PICCOLO_CONF=backend.config.piccolo_test pytest
+```
+
+[pytest]: https://docs.pytest.org/
 [ruff]: https://docs.astral.sh/ruff/
