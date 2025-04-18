@@ -1,6 +1,6 @@
 """
-TODO: These tests cover basic BaseUser functionality likely already tested
-in piccolo_admin itself. Remove these tests once actual application-specific
+This test covers basic BaseUser functionality likely already tested
+in piccolo_admin itself. Remove this test once actual application-specific
 tests involving database transactions are implemented.
 """
 
