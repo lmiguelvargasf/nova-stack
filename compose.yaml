@@ -51,6 +51,7 @@ services:
       - ./frontend/.env.local
     ports:
       - "3000:3000"
+      - "51204:51204"
     volumes:
       - ./frontend:/app
       - /app/node_modules
