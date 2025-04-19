@@ -54,6 +54,7 @@ Run tests with an interactive UI ([Vitest UI][]):
 ```bash
 pnpm run test:ui
 ```
+*(Note: After running the command, access the UI at [Vitest UI Localhost][])*)
 
 #### Run All Tests Once
 Execute the full test suite once:
@@ -71,3 +72,4 @@ pnpm run coverage
 [ESLint]: https://eslint.org/
 [Vitest]: https://vitest.dev/
 [Vitest UI]: https://vitest.dev/guide/ui
+[Vitest UI Localhost]: http://localhost:51204/__vitest__/
