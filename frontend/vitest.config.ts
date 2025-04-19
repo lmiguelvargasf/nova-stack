@@ -1,9 +1,12 @@
 import { defineConfig } from 'vitest/config';
-// @ts-ignore - Package works at runtime but TS can't find its type definitions
 import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
   plugins: [tsconfigPaths()],
+  // Add esbuild configuration for automatic JSX runtime
+  esbuild: {
+    jsx: 'automatic',
+  },
   server: {
     host: '0.0.0.0',
     port: 51204,
