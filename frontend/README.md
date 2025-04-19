@@ -54,7 +54,7 @@ Run tests with an interactive UI ([Vitest UI][]):
 ```bash
 pnpm run test:ui
 ```
-*(Note: After running the command, access the UI at [Vitest UI Localhost][])*)
+*Note: after running the command, access the UI at [Vitest UI Localhost][].*
 
 #### Run All Tests Once
 Execute the full test suite once:
