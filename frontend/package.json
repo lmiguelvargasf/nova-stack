@@ -11,7 +11,10 @@
     "format:biome": "biome format --write .",
     "check:biome": "biome check --write .",
     "check:biome:unsafe": "biome check --write --unsafe .",
-    "test": "vitest"
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "next": "^15.3.0",

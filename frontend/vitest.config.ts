@@ -11,7 +11,7 @@ export default defineConfig({
     include: ['__tests__/**/*.{test,spec}.{ts,tsx}'],
     coverage: {
       provider: 'v8',
-      reporter: ['text', 'html'],
+      reporter: ['text', 'json', 'html'],
       reportsDirectory: './coverage',
     },
   },
