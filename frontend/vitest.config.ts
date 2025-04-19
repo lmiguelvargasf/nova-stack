@@ -22,6 +22,18 @@ export default defineConfig({
       provider: 'v8',
       reporter: ['text', 'json', 'html'],
       reportsDirectory: './coverage',
+      // Exclude build/config files from coverage by default
+      exclude: [
+        // framework and build configs
+        '**/next.config.ts',
+        '**/postcss.config.mjs',
+        '**/eslint.config.mjs',
+        '**/vitest.config.ts',
+        // type declarations
+        '**/next-env.d.ts',
+        // Next.js build output and HMR client files
+        '**/.next/**',
+      ],
     },
   },
 });
