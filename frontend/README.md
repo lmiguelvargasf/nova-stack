@@ -39,9 +39,6 @@ This project also uses [ESLint][] for additional linting via Next.js integration
 pnpm run lint:next
 ```
 
-[Biome]: https://biomejs.dev/
-[ESLint]: https://eslint.org/
-
 ## Testing
 
 This project uses [Vitest][] for testing.
@@ -70,5 +67,7 @@ Run all tests and generate a coverage report:
 pnpm run coverage
 ```
 
+[Biome]: https://biomejs.dev/
+[ESLint]: https://eslint.org/
 [Vitest]: https://vitest.dev/
 [Vitest UI]: https://vitest.dev/guide/ui
