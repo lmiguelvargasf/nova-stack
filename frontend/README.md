@@ -41,3 +41,34 @@ pnpm run lint:next
 
 [Biome]: https://biomejs.dev/
 [ESLint]: https://eslint.org/
+
+## Testing
+
+This project uses [Vitest][] for testing.
+
+#### Run Tests (Watch Mode)
+Run tests and watch for file changes:
+```bash
+pnpm run test
+```
+
+#### Run Tests with UI
+Run tests with an interactive UI ([Vitest UI][]):
+```bash
+pnpm run test:ui
+```
+
+#### Run All Tests Once
+Execute the full test suite once:
+```bash
+pnpm run test:run
+```
+
+#### Generate Coverage Report
+Run all tests and generate a coverage report:
+```bash
+pnpm run coverage
+```
+
+[Vitest]: https://vitest.dev/
+[Vitest UI]: https://vitest.dev/guide/ui
