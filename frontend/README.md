@@ -10,22 +10,22 @@ This service is containerized via Docker Compose. See the [project root README](
 
 This project uses [Biome][] for code linting and formatting.
 
-#### Check and Fix (Safe)
-Run `biome` check and automatically fix safe violations.
+#### Check and Apply Safe Fixes
+Find violations and automatically apply safe fixes (including formatting).
 
 ```bash
 pnpm run check:biome
 ```
 
-#### Check and Fix (Unsafe)
-Run `biome` check and apply potentially unsafe fixes.
+#### Check and Apply All Fixes (Potentially Unsafe)
+Find violations and apply all available fixes (including potentially unsafe ones and formatting).
 
 ```bash
 pnpm run check:biome:unsafe
 ```
 
-#### Format
-Run `biome` formatter and write changes.
+#### Format Code
+Format the codebase using Biome.
 
 ```bash
 pnpm run format:biome
