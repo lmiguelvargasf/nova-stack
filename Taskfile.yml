@@ -1,6 +1,6 @@
 # https://taskfile.dev
 
-version: '3'
+version: '3.17'
 
 vars:
   GREETING: Hello, World!
@@ -28,10 +28,6 @@ tasks:
 
   down:volumes:
     desc: Stop all services and remove volumes
+    aliases: [down:v]
     cmds:
       - docker compose down -v
-
-  down:v:
-    desc: Alias for down:volumes
-    cmds:
-      - task down:volumes
