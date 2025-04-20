@@ -30,3 +30,8 @@ tasks:
     desc: Stop all services and remove volumes
     cmds:
       - docker compose down -v
+
+  down:v:
+    desc: Alias for down:volumes
+    cmds:
+      - task down:volumes
