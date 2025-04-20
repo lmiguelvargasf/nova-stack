@@ -52,7 +52,6 @@ services:
     ports:
       - "3000:3000"
       - "51204:51204"
-      - "9323:9323"
     volumes:
       - ./frontend:/app
       - /app/node_modules
