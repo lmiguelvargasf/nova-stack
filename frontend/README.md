@@ -41,7 +41,10 @@ pnpm run lint:next
 
 ## Testing
 
-This project uses [Vitest][] for testing.
+### Unit & Component Tests
+
+This project uses [Vitest][] for unit and component testing.
+Tests are located in the [__tests__](./__tests__) directory.
 
 #### Run Tests (Watch Mode)
 Run tests and watch for file changes:
@@ -67,9 +70,32 @@ Run all tests and generate a coverage report:
 ```bash
 pnpm run coverage
 ```
+ 
+### End-to-End Tests
+
+This project uses [Playwright][] for end-to-end testing. Tests are located in the [e2e](./e2e) directory.
+
+#### Run E2E Tests (Headless)
+Run all Playwright tests in headless mode:
+```bash
+pnpm run test:e2e
+```
+
+#### Show Playwright HTML Report
+After running tests, view the HTML report with:
+```bash
+pnpm run test:e2e:report
+```
+
+#### Run E2E Tests with Playwright Test UI
+Run tests with the interactive Playwright Test UI:
+```bash
+pnpm run test:e2e:ui
+```
 
 [Biome]: https://biomejs.dev/
 [ESLint]: https://eslint.org/
+[Playwright]: https://playwright.dev/
 [Vitest]: https://vitest.dev/
 [Vitest UI]: https://vitest.dev/guide/ui
 [Vitest UI Localhost]: http://localhost:51204/__vitest__/

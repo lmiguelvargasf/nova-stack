@@ -7,7 +7,7 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "ignore": ["node_modules", ".pnpm-store", "public", ".next"]
+    "ignore": ["node_modules", ".pnpm-store", "public", ".next", "coverage"]
   },
   "formatter": {
     "enabled": true,
