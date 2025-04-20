@@ -27,8 +27,8 @@ The primary prerequisites for this project are:
 #### Alternative Installation
 
 If you prefer not to use Docker Desktop, you can install the components separately:
-- **Docker Engine:** Version 28 or later. [Install Docker Engine](https://docs.docker.com/engine/install/)
-- **Docker Compose:** Version 2 (V2) or later. If you installed Docker Engine separately, you might need to [install the Compose plugin](https://docs.docker.com/compose/install/linux/#install-the-plugin-manually).
+- [**Docker Engine:**](https://docs.docker.com/engine/install/) Version 28 or later.
+- [**Docker Compose:**](https://docs.docker.com/compose/install/linux/#install-the-plugin-manually) Version 2 (V2) or later.
 
 #### Verifying Installation
 
