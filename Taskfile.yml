@@ -3,7 +3,6 @@
 version: '3.17'
 
 vars:
-  GREETING: Hello, World!
   DOCKER_COMPOSE: docker compose
 
 tasks:
