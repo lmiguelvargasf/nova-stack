@@ -27,13 +27,24 @@ uv run ruff format --force-exclude
 
 ## Testing
 
-This project uses [pytest][] for testing.
+This project uses [pytest][] for testing. Coverage is measured using [pytest-cov][] and an HTML report is generated in the [`htmlcov/`](./htmlcov) directory after running the tests.
 
-Run tests using `pytest` with the test database configuration:
+### Running Tests with Coverage
+
+Run tests using `pytest` with the test database configuration. This will generate a coverage report.
 
 ```bash
 PICCOLO_CONF=backend.config.piccolo_test uv run pytest
 ```
 
+### Running Tests without Coverage
+
+Run tests using `pytest` without generating a coverage report.
+
+```bash
+PICCOLO_CONF=backend.config.piccolo_test uv run pytest --no-cov
+```
+
 [pytest]: https://docs.pytest.org/
+[pytest-cov]: https://pytest-cov.readthedocs.io/en/latest/
 [ruff]: https://docs.astral.sh/ruff/
