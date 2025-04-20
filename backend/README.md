@@ -7,52 +7,26 @@ This service is containerized via Docker Compose. See the [project root README](
 - Backend Admin UI: http://localhost:8000/admin/
 - Backend Health Check: http://localhost:8000/health
 
-## Linting & Formatting
+## Tooling
 
-This project uses [ruff][] for code linting and formatting.
+The following tools are used in this project:
 
-#### Check and Auto-fix
-Run `ruff` and automatically fix violations when possible.
+- **[ruff][]:** Used for code linting and formatting.
+- **[pytest][]:** Used for running tests.
+- **[pytest-cov][]:** Used for measuring test coverage.
 
-```bash
-uv run ruff check --force-exclude --fix
-```
 
-#### Format
-Run `ruff`'s formatter.
+## Development Tasks
 
-```bash
-uv run ruff format --force-exclude
-```
+This project uses [Task][] as a task runner to simplify common development workflows like linting, formatting, and testing.
 
-## Testing
-
-This project uses [pytest][] for testing. Coverage is measured using [pytest-cov][], which can generate reports, including an HTML version in the [`htmlcov`](./htmlcov) directory (see commands below).
-
-### Running Tests without Coverage
-
-Run tests without generating a coverage report:
+To see all available tasks and their descriptions, run:
 
 ```bash
-PICCOLO_CONF=backend.config.piccolo_test uv run pytest --no-cov
-```
-
-### Running Tests with Coverage
-
-Run tests with coverage and console report:
-
-```bash
-PICCOLO_CONF=backend.config.piccolo_test uv run pytest
-```
-
-### Running Tests with Coverage with HTML report
-
-Run tests with coverage and HTML report:
-
-```bash
-PICCOLO_CONF=backend.config.piccolo_test uv run pytest --cov-report html
+task --list
 ```
 
 [pytest]: https://docs.pytest.org/
 [pytest-cov]: https://pytest-cov.readthedocs.io/en/latest/readme.html
 [ruff]: https://docs.astral.sh/ruff/
+[Task]: https://taskfile.dev/
