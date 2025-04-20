@@ -14,21 +14,21 @@ This project uses [Biome][] for code linting and formatting.
 Find violations and automatically apply safe fixes (including formatting).
 
 ```bash
-pnpm run check:biome
+pnpm run check
 ```
 
 #### Check and Apply All Fixes (Potentially Unsafe)
 Find violations and apply all available fixes (including potentially unsafe ones and formatting).
 
 ```bash
-pnpm run check:biome:unsafe
+pnpm run check:unsafe
 ```
 
 #### Format Code
 Format the codebase using Biome.
 
 ```bash
-pnpm run format:biome
+pnpm run format
 ```
 
 #### ESLint
