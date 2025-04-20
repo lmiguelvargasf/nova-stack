@@ -29,10 +29,14 @@ export default defineConfig({
         '**/postcss.config.mjs',
         '**/eslint.config.mjs',
         '**/vitest.config.ts',
+        '**/playwright.config.ts',
         // type declarations
         '**/next-env.d.ts',
         // Next.js build output and HMR client files
         '**/.next/**',
+        // Playwright test files
+        '**/e2e/**',
+        '**/tests-examples/**',
       ],
     },
   },
