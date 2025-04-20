@@ -8,29 +8,29 @@ vars:
   FRONTEND_TASK: "{{.DOCKER_COMPOSE}} exec frontend task"
 
 tasks:
-  build:
+  docker:build:
     desc: Build all services (with cache)
     cmds:
       - "{{.DOCKER_COMPOSE}} build"
 
-  build:no-cache:
+  docker:build:no-cache:
     desc: Build all services without cache
     cmds:
       - "{{.DOCKER_COMPOSE}} build --no-cache"
 
-  up:
+  docker:up:
     desc: Start all services
     cmds:
       - "{{.DOCKER_COMPOSE}} up"
 
-  down:
+  docker:down:
     desc: Stop all services
     cmds:
       - "{{.DOCKER_COMPOSE}} down"
 
-  down:volumes:
+  docker:down:volumes:
     desc: Stop all services and remove volumes
-    aliases: [down:v]
+    aliases: [docker:down:v]
     cmds:
       - "{{.DOCKER_COMPOSE}} down -v"
 
