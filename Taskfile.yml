@@ -45,56 +45,56 @@ tasks:
       - "{{.BACKEND_TASK}} format"
 
   backend:test:
-    desc: Run backend tests
+    desc: Run backend test
     cmds:
       - "{{.BACKEND_TASK}} test"
 
   backend:test:cov:
-    desc: Run backend tests with coverage
+    desc: Run backend test:cov
     cmds:
       - "{{.BACKEND_TASK}} test:cov"
 
   backend:test:cov:html:
-    desc: Run backend tests with coverage and HTML report
+    desc: Run backend test:cov:html
     cmds:
       - "{{.BACKEND_TASK}} test:cov:html"
 
   frontend:lint:
-    desc: Run Biome linter
+    desc: Run frontend lint
     cmds:
       - "{{.FRONTEND_TASK}} lint"
 
   frontend:format:
-    desc: Format code using Biome
+    desc: Run frontend format
     cmds:
       - "{{.FRONTEND_TASK}} format"
 
   frontend:check:
-    desc: Check Biome rules and apply safe fixes (incl. formatting)
+    desc: Run frontend check
     cmds:
       - "{{.FRONTEND_TASK}} check"
 
   frontend:check:unsafe:
-    desc: Check Biome rules and apply all fixes (incl. unsafe and formatting)
+    desc: Run frontend check:unsafe
     cmds:
       - "{{.FRONTEND_TASK}} check:unsafe"
 
   frontend:test:run:
-    desc: Run all unit/component tests (Vitest) once
+    desc: Run frontend test:run
     cmds:
       - "{{.FRONTEND_TASK}} test:run"
 
   frontend:test:ui:
-    desc: Run unit/component tests (Vitest) with interactive UI, available at http://localhost:51204/__vitest__/
+    desc: Run frontend test:ui
     cmds:
       - "{{.FRONTEND_TASK}} test:ui"
 
   frontend:coverage:
-    desc: Generate unit/component test (Vitest) coverage report
+    desc: Run frontend coverage
     cmds:
       - "{{.FRONTEND_TASK}} coverage"
 
   frontend:test:e2e:
-    desc: Run end-to-end tests (Playwright) headlessly
+    desc: Run frontend test:e2e
     cmds:
       - "{{.FRONTEND_TASK}} test:e2e"
