@@ -1,5 +1,9 @@
 FROM mcr.microsoft.com/playwright:v1.52.0-noble
 
+# Install Taskfile
+RUN sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d
+ENV PATH="${PATH}:/app/bin"
+
 WORKDIR /app
 
 RUN corepack enable \
