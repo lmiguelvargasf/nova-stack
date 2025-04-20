@@ -56,3 +56,43 @@ tasks:
     desc: Run backend tests with coverage and HTML report
     cmds:
       - "{{.DOCKER_COMPOSE}} exec backend task test:cov:html"
+
+  frontend:lint:
+    desc: Run Biome linter
+    cmds:
+      - "{{.DOCKER_COMPOSE}} exec frontend task lint"
+
+  frontend:format:
+    desc: Format code using Biome
+    cmds:
+      - "{{.DOCKER_COMPOSE}} exec frontend task format"
+
+  frontend:check:
+    desc: Check Biome rules and apply safe fixes (incl. formatting)
+    cmds:
+      - "{{.DOCKER_COMPOSE}} exec frontend task check"
+
+  frontend:check:unsafe:
+    desc: Check Biome rules and apply all fixes (incl. unsafe and formatting)
+    cmds:
+      - "{{.DOCKER_COMPOSE}} exec frontend task check:unsafe"
+
+  frontend:test:run:
+    desc: Run all unit/component tests (Vitest) once
+    cmds:
+      - "{{.DOCKER_COMPOSE}} exec frontend task test:run"
+
+  frontend:test:ui:
+    desc: Run unit/component tests (Vitest) with interactive UI, available at http://localhost:51204/__vitest__/
+    cmds:
+      - "{{.DOCKER_COMPOSE}} exec frontend task test:ui"
+
+  frontend:coverage:
+    desc: Generate unit/component test (Vitest) coverage report
+    cmds:
+      - "{{.DOCKER_COMPOSE}} exec frontend task coverage"
+
+  frontend:test:e2e:
+    desc: Run end-to-end tests (Playwright) headlessly
+    cmds:
+      - "{{.DOCKER_COMPOSE}} exec frontend task test:e2e"
