@@ -20,16 +20,23 @@ A modern financial application to track spending, organize transactions, and vis
 
 ### Prerequisites
 
-The easiest way to get the required Docker environment is by installing **[Docker Desktop][docker-desktop]**, which includes both Docker Engine and Docker Compose.
+The primary prerequisites for this project are:
+- **[Docker Desktop][docker-desktop]:** Provides Docker Engine and Docker Compose.
+- **[Task][task]:** A task runner / build tool used for managing common development workflows.
 
-Alternatively, if you install the components separately:
+#### Alternative Installation
+
+If you prefer not to use Docker Desktop, you can install the components separately:
 - **Docker Engine:** Version 28 or later. [Install Docker Engine](https://docs.docker.com/engine/install/)
 - **Docker Compose:** Version 2 (V2) or later. If you installed Docker Engine separately, you might need to [install the Compose plugin](https://docs.docker.com/compose/install/linux/#install-the-plugin-manually).
+
+#### Verifying Installation
 
 You can verify your installation by running:
 ```bash
 docker --version
 docker compose version
+task --version
 ```
 
 ### Environment Setup
@@ -45,27 +52,46 @@ docker compose version
 
 ### Starting the Application
 
-1. Build and start all services:
+1. Build the Docker images:
    ```bash
-   docker compose up --build
+   task build
    ```
 
-2. The services will be available at:
+2. Start all services:
+   ```bash
+   task up
+   ```
+
+3. The services will be available at:
    - Frontend Application: http://localhost:3000
    - Backend Admin UI: http://localhost:8000/admin/
    - Backend Health Check: http://localhost:8000/health
 
-3. To stop and remove containers:
+4. To stop and remove containers:
    ```bash
-   docker compose down
+   task down
    ```
+
+## Development Tasks
+
+This project uses [Task][] as a task runner to simplify common development workflows. The main `Taskfile.yml` in the project root provides commands for:
+
+- Managing the Docker environment (e.g., building images, starting/stopping services).
+- Running development tasks within the `backend` and `frontend` services (e.g., linting, formatting, testing).
+
+To see all available tasks and their descriptions, run the following command from the project root:
+
+```bash
+task --list
+```
+
+Refer to the `README.md` files in the [`backend`](./backend/README.md) and [`frontend`](./frontend/README.md) for service-specific task details.
 
 ## Deployment
 ...
 
 ## License
 MIT
-
 
 [chartjs]: https://www.chartjs.org/
 [docker-desktop]: https://www.docker.com/products/docker-desktop/
@@ -75,4 +101,5 @@ MIT
 [postgresql]: https://www.postgresql.org/
 [python]: https://www.python.org/
 [tailwind]: https://tailwindcss.com/
+[task]: https://taskfile.dev/
 [typescript]: https://www.typescriptlang.org/
