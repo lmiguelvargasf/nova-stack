@@ -27,11 +27,11 @@ uv run ruff format --force-exclude
 
 ## Testing
 
-This project uses [pytest][] for testing. Coverage is measured using [pytest-cov][] and an HTML report is generated in the [`htmlcov/`](./htmlcov) directory after running the tests.
+This project uses [pytest][] for testing. Coverage is measured using [pytest-cov][], which can generate reports, including an HTML version in the [`htmlcov`](./htmlcov) directory (see commands below).
 
 ### Running Tests without Coverage
 
-Run tests using `pytest` without generating a coverage report.
+Run tests without generating a coverage report:
 
 ```bash
 PICCOLO_CONF=backend.config.piccolo_test uv run pytest --no-cov
@@ -39,7 +39,7 @@ PICCOLO_CONF=backend.config.piccolo_test uv run pytest --no-cov
 
 ### Running Tests with Coverage
 
-Run tests with coverage (console report):
+Run tests with coverage and console report:
 
 ```bash
 PICCOLO_CONF=backend.config.piccolo_test uv run pytest
