@@ -39,7 +39,7 @@ PICCOLO_CONF=backend.config.piccolo_test uv run pytest --no-cov
 
 ### Running Tests with Coverage
 
-Run tests with coverage, the following command generates a `.coverage` data file:
+Run tests with coverage (console report):
 
 ```bash
 PICCOLO_CONF=backend.config.piccolo_test uv run pytest
@@ -47,7 +47,7 @@ PICCOLO_CONF=backend.config.piccolo_test uv run pytest
 
 ### Running Tests with Coverage with HTML report
 
-To generate an HTML report directly in the [`htmlcov/`](./htmlcov) directory while running tests, add the `--cov-report html` flag:
+Run tests with coverage and HTML report:
 
 ```bash
 PICCOLO_CONF=backend.config.piccolo_test uv run pytest --cov-report html
