@@ -4,30 +4,31 @@ version: '3.17'
 
 vars:
   GREETING: Hello, World!
+  DOCKER_COMPOSE: docker compose
 
 tasks:
   build:
     desc: Build all services (with cache)
     cmds:
-      - docker compose build
+      - "{{.DOCKER_COMPOSE}} build"
 
   build:no-cache:
     desc: Build all services without cache
     cmds:
-      - docker compose build --no-cache
+      - "{{.DOCKER_COMPOSE}} build --no-cache"
 
   up:
     desc: Start all services
     cmds:
-      - docker compose up
+      - "{{.DOCKER_COMPOSE}} up"
 
   down:
     desc: Stop all services
     cmds:
-      - docker compose down
+      - "{{.DOCKER_COMPOSE}} down"
 
   down:volumes:
     desc: Stop all services and remove volumes
     aliases: [down:v]
     cmds:
-      - docker compose down -v
+      - "{{.DOCKER_COMPOSE}} down -v"
