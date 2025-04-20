@@ -54,5 +54,5 @@ PICCOLO_CONF=backend.config.piccolo_test uv run pytest --cov-report html
 ```
 
 [pytest]: https://docs.pytest.org/
-[pytest-cov]: https://pytest-cov.readthedocs.io/en/latest/
+[pytest-cov]: https://pytest-cov.readthedocs.io/en/latest/readme.html
 [ruff]: https://docs.astral.sh/ruff/
