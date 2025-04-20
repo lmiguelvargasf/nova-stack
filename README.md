@@ -74,12 +74,12 @@ task --version
 
 ## Development Tasks
 
-This project uses [Task][] as a task runner to simplify common development workflows. The main `Taskfile.yml` in the project root provides commands for:
+This project uses [Task][] to simplify common development workflows. The main `Taskfile.yml` in the project root provides commands for:
 
 - Managing the Docker environment (e.g., building images, starting/stopping services).
 - Running development tasks within the `backend` and `frontend` services (e.g., linting, formatting, testing).
 
-To see all available tasks and their descriptions, run the following command from the project root:
+To list all available tasks:
 
 ```bash
 task --list
