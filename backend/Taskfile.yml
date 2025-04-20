@@ -3,7 +3,6 @@
 version: '3'
 
 vars:
-  GREETING: Hello, World!
   RUFF: uv run ruff
   PYTEST: uv run pytest
 
