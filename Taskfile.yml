@@ -31,3 +31,28 @@ tasks:
     aliases: [down:v]
     cmds:
       - "{{.DOCKER_COMPOSE}} down -v"
+
+  backend:lint:fix:
+    desc: Run backend lint:fix via docker compose exec
+    cmds:
+      - "{{.DOCKER_COMPOSE}} exec backend task lint:fix"
+
+  backend:format:
+    desc: Run backend format via docker compose exec
+    cmds:
+      - "{{.DOCKER_COMPOSE}} exec backend task format"
+
+  backend:test:
+    desc: Run backend tests via docker compose exec
+    cmds:
+      - "{{.DOCKER_COMPOSE}} exec backend task test"
+
+  backend:test:cov:
+    desc: Run backend tests with coverage via docker compose exec
+    cmds:
+      - "{{.DOCKER_COMPOSE}} exec backend task test:cov"
+
+  backend:test:cov:html:
+    desc: Run backend tests with coverage and HTML report via docker compose exec
+    cmds:
+      - "{{.DOCKER_COMPOSE}} exec backend task test:cov:html"
