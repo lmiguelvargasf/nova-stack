@@ -41,7 +41,9 @@ pnpm run lint:next
 
 ## Testing
 
-This project uses [Vitest][] for testing.
+### Unit & Component Tests
+
+This project uses [Vitest][] for unit and component testing.
 
 #### Run Tests (Watch Mode)
 Run tests and watch for file changes:
@@ -68,9 +70,9 @@ Run all tests and generate a coverage report:
 pnpm run coverage
 ```
  
-## End-to-End (E2E) Testing
+### End-to-End Tests
 
-This project uses [Playwright][] for end-to-end testing. Tests are located in the `e2e` directory.
+This project uses [Playwright][] for end-to-end testing. Tests are located in the [e2e](./e2e/) directory.
 
 #### Run E2E Tests (Headless)
 Run all Playwright tests in headless mode:
