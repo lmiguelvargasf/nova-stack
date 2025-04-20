@@ -6,7 +6,27 @@ vars:
   GREETING: Hello, World!
 
 tasks:
-  default:
+  build:
+    desc: Build all services (with cache)
     cmds:
-      - echo "{{.GREETING}}"
-    silent: true
+      - docker compose build
+
+  build:no-cache:
+    desc: Build all services without cache
+    cmds:
+      - docker compose build --no-cache
+
+  up:
+    desc: Start all services
+    cmds:
+      - docker compose up
+
+  down:
+    desc: Stop all services
+    cmds:
+      - docker compose down
+
+  down:volumes:
+    desc: Stop all services and remove volumes
+    cmds:
+      - docker compose down -v
