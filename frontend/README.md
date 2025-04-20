@@ -78,23 +78,21 @@ Run all Playwright tests in headless mode:
 pnpm run test:e2e
 ```
 
-#### Run E2E Tests with Playwright Test UI
-Run tests with the interactive Playwright Test UI:
-```bash
-pnpm run test:e2e:ui
-```
-*Note: After starting, access the UI at [Playwright UI Localhost] by default.*
-
 #### Show Playwright HTML Report
 After running tests, view the HTML report with:
 ```bash
 pnpm run test:e2e:report
 ```
 
+#### Run E2E Tests with Playwright Test UI
+Run tests with the interactive Playwright Test UI:
+```bash
+pnpm run test:e2e:ui
+```
+
 [Biome]: https://biomejs.dev/
 [ESLint]: https://eslint.org/
 [Playwright]: https://playwright.dev/
-[Playwright UI Localhost]: http://localhost:9323/
 [Vitest]: https://vitest.dev/
 [Vitest UI]: https://vitest.dev/guide/ui
 [Vitest UI Localhost]: http://localhost:51204/__vitest__/
