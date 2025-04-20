@@ -4,9 +4,30 @@ version: '3'
 
 vars:
   GREETING: Hello, World!
+  RUFF: uv run ruff
 
 tasks:
-  default:
+  lint:fix:
+    desc: Run ruff and automatically fix violations
     cmds:
-      - echo "{{.GREETING}}"
-    silent: true
+      - "{{.RUFF}} check --force-exclude --fix"
+
+  format:
+    desc: Run ruff's formatter
+    cmds:
+      - "{{.RUFF}} format --force-exclude"
+
+  test:
+    desc: Run tests without coverage
+    cmds:
+      - PICCOLO_CONF=backend.config.piccolo_test uv run pytest --no-cov
+
+  test:cov:
+    desc: Run tests with coverage and console report
+    cmds:
+      - PICCOLO_CONF=backend.config.piccolo_test uv run pytest
+
+  test:cov:html:
+    desc: Run tests with coverage and HTML report
+    cmds:
+      - PICCOLO_CONF=backend.config.piccolo_test uv run pytest --cov-report html
