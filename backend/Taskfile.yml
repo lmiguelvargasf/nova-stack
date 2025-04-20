@@ -5,6 +5,7 @@ version: '3'
 vars:
   GREETING: Hello, World!
   RUFF: uv run ruff
+  PYTEST: uv run pytest
 
 tasks:
   lint:fix:
@@ -20,14 +21,14 @@ tasks:
   test:
     desc: Run tests without coverage
     cmds:
-      - PICCOLO_CONF=backend.config.piccolo_test uv run pytest --no-cov
+      - PICCOLO_CONF=backend.config.piccolo_test {{.PYTEST}} --no-cov
 
   test:cov:
     desc: Run tests with coverage and console report
     cmds:
-      - PICCOLO_CONF=backend.config.piccolo_test uv run pytest
+      - PICCOLO_CONF=backend.config.piccolo_test {{.PYTEST}}
 
   test:cov:html:
     desc: Run tests with coverage and HTML report
     cmds:
-      - PICCOLO_CONF=backend.config.piccolo_test uv run pytest --cov-report html
+      - PICCOLO_CONF=backend.config.piccolo_test {{.PYTEST}} --cov-report html
