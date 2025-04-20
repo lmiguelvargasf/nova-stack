@@ -6,96 +6,25 @@ This service is containerized via Docker Compose. See the [project root README](
 
 - Frontend Application: http://localhost:3000
 
-## Linting & Formatting
+## Tooling
 
-This project uses [Biome][] for code linting and formatting.
+The following tools are used in this project:
 
-#### Check and Apply Safe Fixes
-Find violations and automatically apply safe fixes (including formatting).
+- **[Biome][]:** Used for code linting and formatting.
+- **[Vitest][]:** Used for running unit and component tests.
+- **[Playwright][]:** Used for running end-to-end tests.
 
-```bash
-pnpm run check
-```
+## Development Tasks
 
-#### Check and Apply All Fixes (Potentially Unsafe)
-Find violations and apply all available fixes (including potentially unsafe ones and formatting).
+This project uses [Task][] as a task runner to simplify common development workflows like linting, formatting, testing, and running the application.
 
-```bash
-pnpm run check:unsafe
-```
-
-#### Format Code
-Format the codebase using Biome.
+To see all available tasks and their descriptions, run:
 
 ```bash
-pnpm run format
-```
-
-#### ESLint
-
-This project also uses [ESLint][] for additional linting via Next.js integration.
-
-```bash
-pnpm run lint:next
-```
-
-## Testing
-
-### Unit & Component Tests
-
-This project uses [Vitest][] for unit and component testing.
-Tests are located in the [__tests__](./__tests__) directory.
-
-#### Run Tests (Watch Mode)
-Run tests and watch for file changes:
-```bash
-pnpm run test
-```
-
-#### Run Tests with UI
-Run tests with an interactive UI ([Vitest UI][]):
-```bash
-pnpm run test:ui
-```
-*Note: after running the command, access the UI at [Vitest UI Localhost][].*
-
-#### Run All Tests Once
-Execute the full test suite once:
-```bash
-pnpm run test:run
-```
-
-#### Generate Coverage Report
-Run all tests and generate a coverage report:
-```bash
-pnpm run coverage
-```
- 
-### End-to-End Tests
-
-This project uses [Playwright][] for end-to-end testing. Tests are located in the [e2e](./e2e) directory.
-
-#### Run E2E Tests (Headless)
-Run all Playwright tests in headless mode:
-```bash
-pnpm run test:e2e
-```
-
-#### Show Playwright HTML Report
-After running tests, view the HTML report with:
-```bash
-pnpm run test:e2e:report
-```
-
-#### Run E2E Tests with Playwright Test UI
-Run tests with the interactive Playwright Test UI:
-```bash
-pnpm run test:e2e:ui
+task --list
 ```
 
 [Biome]: https://biomejs.dev/
-[ESLint]: https://eslint.org/
 [Playwright]: https://playwright.dev/
+[Task]: https://taskfile.dev/
 [Vitest]: https://vitest.dev/
-[Vitest UI]: https://vitest.dev/guide/ui
-[Vitest UI Localhost]: http://localhost:51204/__vitest__/
