@@ -9,7 +9,7 @@ from .db import close_database_connection_pool, open_database_connection_pool
 
 @asgi("/admin/", is_mount=True, copy_scope=False)
 async def admin(scope: Scope, receive: Receive, send: Send) -> None:
-    await create_admin(tables=[BaseUser])(scope, receive, send)
+    await create_admin(tables=[BaseUser])(scope, receive, send) # type: ignore[arg-type]
 
 
 class HealthStatus(BaseModel):
