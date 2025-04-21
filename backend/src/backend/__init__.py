@@ -1,6 +1,7 @@
 from litestar import Litestar, asgi, get
 from litestar.types import Receive, Scope, Send
-from piccolo_admin.endpoints import BaseUser, create_admin
+from piccolo.apps.user.tables import BaseUser
+from piccolo_admin.endpoints import create_admin
 from pydantic import BaseModel
 
 from .db import close_database_connection_pool, open_database_connection_pool
@@ -8,7 +9,7 @@ from .db import close_database_connection_pool, open_database_connection_pool
 
 @asgi("/admin/", is_mount=True, copy_scope=False)
 async def admin(scope: Scope, receive: Receive, send: Send) -> None:
-    await create_admin(tables=[BaseUser])(scope, receive, send)
+    await create_admin(tables=[BaseUser])(scope, receive, send)  # type: ignore[arg-type]
 
 
 class HealthStatus(BaseModel):
