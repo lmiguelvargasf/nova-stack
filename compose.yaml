@@ -52,6 +52,7 @@ services:
     ports:
       - "3000:3000"
       - "51204:51204" # Vite UI
+      - "6006:6006" # Storybook
     volumes:
       - ./frontend:/app
       - /app/node_modules
