@@ -1,6 +1,7 @@
 from litestar import Litestar, asgi, get
 from litestar.types import Receive, Scope, Send
-from piccolo_admin.endpoints import BaseUser, create_admin
+from piccolo_admin.endpoints import create_admin
+from piccolo.apps.user.tables import BaseUser
 from pydantic import BaseModel
 
 from .db import close_database_connection_pool, open_database_connection_pool

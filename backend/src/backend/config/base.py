@@ -10,4 +10,4 @@ class Settings(BaseSettings):
     postgres_port: int
 
 
-settings = Settings()
+settings = Settings()  # type: ignore[call-arg]
