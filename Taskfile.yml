@@ -59,6 +59,11 @@ tasks:
     cmds:
       - "{{.BACKEND_TASK}} test:cov:html"
 
+  backend:typecheck:
+    desc: Run backend typecheck
+    cmds:
+      - "{{.BACKEND_TASK}} typecheck"
+
   frontend:lint:
     desc: Run frontend lint
     cmds:
