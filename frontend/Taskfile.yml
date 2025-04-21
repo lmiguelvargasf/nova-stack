@@ -58,12 +58,12 @@ tasks:
     cmds:
       - pnpm run test:e2e:ui
 
-  storybook:run:
-    desc: Run Storybook development server
-    cmds:
-      - pnpm run storybook:run
-
   storybook:build:
     desc: Build Storybook static site
     cmds:
       - pnpm run storybook:build
+
+  storybook:run:
+    desc: Run Storybook development server
+    cmds:
+      - pnpm run storybook:run

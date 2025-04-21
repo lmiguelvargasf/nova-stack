@@ -13,6 +13,7 @@ The following tools are used in this project:
 - **[Biome][]:** Used for code linting and formatting.
 - **[Vitest][]:** Used for running unit and component tests.
 - **[Playwright][]:** Used for running end-to-end tests.
+- **[Storybook][]:** Used for UI component development and testing.
 
 ## Development Tasks
 
@@ -28,3 +29,4 @@ task --list
 [Playwright]: https://playwright.dev/
 [Task]: https://taskfile.dev/
 [Vitest]: https://vitest.dev/
+[Storybook]: https://storybook.js.org/
