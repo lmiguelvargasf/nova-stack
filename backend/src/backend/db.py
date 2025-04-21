@@ -13,7 +13,9 @@ async def open_database_connection_pool():
         await engine.start_connection_pool()
         logger.info("Database connection pool started.")
     except Exception as e:
-        logger.exception(f"Failed to start database connection pool for engine {engine}: {e}")
+        logger.exception(
+            f"Failed to start database connection pool for engine {engine}: {e}"
+        )
         raise
 
 
@@ -28,4 +30,6 @@ async def close_database_connection_pool():
         await engine.close_connection_pool()
         logger.info("Database connection pool closed.")
     except Exception as e:
-        logger.exception(f"Error closing database connection pool for engine {engine}: {e}")
+        logger.exception(
+            f"Error closing database connection pool for engine {engine}: {e}"
+        )
