@@ -40,6 +40,12 @@ export default defineConfig({
         // Playwright test files
         "**/e2e/**",
         "**/tests-examples/**",
+        "**/playwright-report/**",
+        // Storybook files
+        "vitest.shims.d.ts",
+        "vitest.workspace.ts",
+        ".storybook/**",
+        "**/storybook-static/**",
       ],
     },
   },

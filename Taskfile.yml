@@ -103,3 +103,13 @@ tasks:
     desc: Run frontend test:e2e
     cmds:
       - "{{.FRONTEND_TASK}} test:e2e"
+
+  frontend:storybook:build:
+    desc: Run frontend storybook:build
+    cmds:
+      - "{{.FRONTEND_TASK}} storybook:build"
+
+  frontend:storybook:run:
+    desc: Run frontend storybook:run
+    cmds:
+      - "{{.FRONTEND_TASK}} storybook:run"

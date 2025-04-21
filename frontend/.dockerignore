@@ -3,3 +3,14 @@ node_modules
 *.log
 .env*
 .git
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# Storybook
+.storybook/
+src/stories/
+storybook-static/
