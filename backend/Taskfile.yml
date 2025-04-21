@@ -5,7 +5,6 @@ version: '3'
 vars:
   RUFF: uv run ruff
   PYTEST: uv run pytest
-  PYRIGHT: uv run pyright
 
 tasks:
   lint:fix:
@@ -21,7 +20,7 @@ tasks:
   typecheck:
     desc: Run pyright for static type checking
     cmds:
-      - "{{.PYRIGHT}}"
+      - "uv run pyright"
 
   test:
     desc: Run tests without coverage
