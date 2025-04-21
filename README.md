@@ -54,12 +54,12 @@ task --version
 
 1. Build the Docker images:
    ```bash
-   task build
+   task docker:build
    ```
 
 2. Start all services:
    ```bash
-   task up
+   task docker:up
    ```
 
 3. The services will be available at:
@@ -69,7 +69,7 @@ task --version
 
 4. To stop and remove containers:
    ```bash
-   task down
+   task docker:down
    ```
 
 ## Development Tasks
