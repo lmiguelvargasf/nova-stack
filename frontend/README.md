@@ -4,7 +4,7 @@ This service is containerized via Docker Compose. See the [project root README](
 
 ## Access Frontend
 
-- Frontend Application: http://localhost:3000
+- [Frontend Application](http://localhost:3000)
 
 ## Tooling
 

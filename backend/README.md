@@ -4,8 +4,8 @@ This service is containerized via Docker Compose. See the [project root README](
 
 ## Access Backend
 
-- Backend Admin UI: http://localhost:8000/admin/
-- Backend Health Check: http://localhost:8000/health
+- [Backend Admin UI](http://localhost:8000/admin/)
+- [Backend Health Check](http://localhost:8000/health)
 
 ## Tooling
 
