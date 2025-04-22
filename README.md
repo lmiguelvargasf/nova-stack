@@ -92,7 +92,7 @@ task --version
 
 This project uses [Task][] to simplify common development workflows. The main `Taskfile.yml` in the project root provides commands for:
 
-- Managing the Docker environment (for example, building images, starting or stopping services).
+- Managing the Docker environment (for example, building, starting, or stopping services).
 - Running development tasks within the `backend` and `frontend` services (such as linting, formatting, or testing).
 
 To list all available tasks, run:
