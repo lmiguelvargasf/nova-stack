@@ -87,11 +87,9 @@ task --list
 
 Refer to the `README.md` files in the [`backend`](./backend/README.md) and [`frontend`](./frontend/README.md) for service-specific task details.
 
-## Deployment
-...
-
 ## License
-MIT
+
+This project is licensed under the [MIT License](./LICENSE).
 
 [chartjs]: https://www.chartjs.org/
 [docker-desktop]: https://www.docker.com/products/docker-desktop/
