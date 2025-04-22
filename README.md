@@ -5,7 +5,7 @@
 ![Node.js v22.14](https://img.shields.io/badge/node.js-v22.14-brightgreen)
 ![Next.js](https://img.shields.io/badge/Next.js-15.x-black?logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?logo=postgresql)
+![PostgreSQL 16](https://img.shields.io/badge/PostgreSQL-17-0074D9?logo=postgresql&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-Container-2496ED?logo=docker)
 ![Task](https://img.shields.io/badge/Task-Runner-4B8BBE?logo=task)
 
@@ -21,13 +21,13 @@ A modern full-stack application template built for quick and efficient project s
 ## Tech Stack
 
 ### Backend
-- **[Python][python]** – Core programming language for backend (version 3.13).
+- **[Python][python]** – Core programming language for backend.
 - **[Litestar][litestar]** – High-performance ASGI framework for modern Python web apps.
 - **[Piccolo][piccolo]** – Async ORM and query builder with migration support.
 - **[PostgreSQL][postgresql]** – Advanced open-source relational database known for reliability.
 
 ### Frontend
-- **[TypeScript][typescript]** – Core language for frontend, adding static types to JavaScript (version 5.x).
+- **[TypeScript][typescript]** – Core language for frontend, adding static types to JavaScript.
 - **[Next.js][nextjs]** – React framework for production-ready applications.
 - **[Tailwind CSS][tailwind]** – Utility-first CSS framework for rapid UI development.
 - **[Chart.js][chartjs]** – Simple yet flexible JavaScript charting library.
