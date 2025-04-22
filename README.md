@@ -1,13 +1,13 @@
 # Nova Stack 🌟
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-![Python](https://img.shields.io/badge/python-3.13-blue)
-![Node.js](https://img.shields.io/badge/node.js-v22.14-brightgreen)
-![Next.js](https://img.shields.io/badge/Next.js-15.x-black?logo=next.js)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-17-0074D9?logo=postgresql&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-0074D9?logo=docker&logoColor=white)
-![Task](https://img.shields.io/badge/Task-43B883?logo=task&logoColor=white)
+![Python](https://img.shields.io/badge/python-3.13-blue?style=for-the-badge&logo=python)
+![Node.js](https://img.shields.io/badge/node.js-v22.14-brightgreen?style=for-the-badge&logo=node.js)
+![Next.js](https://img.shields.io/badge/Next.js-15.x-black?style=for-the-badge&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-17-0074D9?style=for-the-badge&logo=postgresql&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-0074D9?style=for-the-badge&logo=docker&logoColor=white)
+![Task](https://img.shields.io/badge/Task-43B883?style=for-the-badge&logo=task&logoColor=white)
 
 A modern full-stack application template built for quick and efficient project setup.
 
