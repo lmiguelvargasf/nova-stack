@@ -87,9 +87,6 @@ task --list
 
 Refer to the `README.md` files in the [`backend`](./backend/README.md) and [`frontend`](./frontend/README.md) for service-specific task details.
 
-## Deployment
-...
-
 ## License
 MIT
 
