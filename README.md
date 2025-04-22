@@ -5,13 +5,13 @@ A modern full-stack application template built for quick and efficient project s
 ## Tech Stack
 
 ### Backend
-- **[Python][python]** - Core programming language for backend.
+- **[Python][python]** - Core programming language for backend (version 3.13).
 - **[Litestar][litestar]** - High-performance ASGI framework for modern Python web apps.
 - **[Piccolo][piccolo]** - Async ORM and query builder with migration support.
 - **[PostgreSQL][postgresql]** - Advanced open-source relational database known for reliability.
 
 ### Frontend
-- **[TypeScript][typescript]** - Core language for frontend, adding static types to JavaScript.
+- **[TypeScript][typescript]** - Core language for frontend, adding static types to JavaScript (version 5.x).
 - **[Next.js][nextjs]** - React framework for production-ready applications
 - **[Tailwind CSS][tailwind]** - Utility-first CSS framework for rapid UI development
 - **[Chart.js][chartjs]** - Simple yet flexible JavaScript charting library
