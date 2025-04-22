@@ -1,11 +1,11 @@
 # Nova Stack 🌟
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-![Python 3.13](https://img.shields.io/badge/python-3.13-blue)
-![Node.js v22.14](https://img.shields.io/badge/node.js-v22.14-brightgreen)
+![Python](https://img.shields.io/badge/python-3.13-blue)
+![Node.js](https://img.shields.io/badge/node.js-v22.14-brightgreen)
 ![Next.js](https://img.shields.io/badge/Next.js-15.x-black?logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript)
-![PostgreSQL 16](https://img.shields.io/badge/PostgreSQL-17-0074D9?logo=postgresql&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-17-0074D9?logo=postgresql&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-Container-2496ED?logo=docker)
 ![Task](https://img.shields.io/badge/Task-Runner-4B8BBE?logo=task)
 
