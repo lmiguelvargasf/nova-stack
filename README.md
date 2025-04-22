@@ -1,6 +1,6 @@
 # Nova Stack 🌟
 
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
 ![Python](https://img.shields.io/badge/python-3.13-blue?style=for-the-badge&logo=python)
 ![Node.js](https://img.shields.io/badge/node.js-v22.14-brightgreen?style=for-the-badge&logo=node.js)
 ![Next.js](https://img.shields.io/badge/Next.js-15.x-black?style=for-the-badge&logo=next.js)
