@@ -6,8 +6,8 @@
 ![Next.js](https://img.shields.io/badge/Next.js-15.x-black?logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-17-0074D9?logo=postgresql&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-Container-2496ED?logo=docker)
-![Task](https://img.shields.io/badge/Task-Runner-4B8BBE?logo=task)
+![Docker](https://img.shields.io/badge/Docker-0074D9?logo=docker&logoColor=white)
+![Task](https://img.shields.io/badge/Task-43B883?logo=task&logoColor=white)
 
 A modern full-stack application template built for quick and efficient project setup.
 
