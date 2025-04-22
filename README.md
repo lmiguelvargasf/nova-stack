@@ -2,7 +2,7 @@
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Python 3.13](https://img.shields.io/badge/python-3.13-blue)
-![Node.js v22.14.0](https://img.shields.io/badge/node.js-v22.14.0-brightgreen)
+![Node.js v22.14](https://img.shields.io/badge/node.js-v22.14-brightgreen)
 
 A modern full-stack application template built for quick and efficient project setup.
 
