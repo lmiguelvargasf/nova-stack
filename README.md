@@ -42,13 +42,13 @@ The primary prerequisites for this project are:
 
 #### Alternative Installation
 
-If you prefer not to use Docker Desktop, you can install the components separately:
+Alternatively, install the components separately:
 - [**Docker Engine:**](https://docs.docker.com/engine/install/) Version 28 or later.
 - [**Docker Compose:**](https://docs.docker.com/compose/install/linux/#install-the-plugin-manually) Version 2 (V2) or later.
 
 #### Verifying Installation
 
-You can verify your installation by running:
+Verify the installation by running:
 ```bash
 docker --version
 docker compose version
@@ -64,7 +64,7 @@ task --version
    cp frontend/.env.local.example frontend/.env.local
    ```
 
-2. Edit the environment files (`.env`, `backend/.env`, and `frontend/.env.local`) to set your required secrets and configuration values (such as database URLs, API keys, etc.).
+2. Edit the environment files (`.env`, `backend/.env`, and `frontend/.env.local`) to set the required secrets and configuration values (such as database URLs, API keys, etc.).
 
 ### Starting the Application
 
