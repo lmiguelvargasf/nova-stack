@@ -1,6 +1,6 @@
-# Freya
+# Nova Stack 🌟
 
-A modern financial application to track spending, organize transactions, and visualize financial trends.
+A modern full-stack application template built for quick and efficient project setup.
 
 ## Tech Stack
 
