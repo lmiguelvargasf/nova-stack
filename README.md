@@ -2,6 +2,13 @@
 
 A modern full-stack application template built for quick and efficient project setup.
 
+## Table of Contents
+
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Development Tasks](#development-tasks)
+- [License](#license)
+
 ## Tech Stack
 
 ### Backend
