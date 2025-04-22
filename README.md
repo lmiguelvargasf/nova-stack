@@ -79,9 +79,9 @@ task --version
    ```
 
 3. The services will be available at:
-   - [Frontend application](http://localhost:3000)
-   - [Backend admin UI](http://localhost:8000/admin/)
-   - [Backend health check](http://localhost:8000/health)
+   - [Frontend Application](http://localhost:3000)
+   - [Backend Admin UI](http://localhost:8000/admin/)
+   - [Backend Health Check](http://localhost:8000/health)
 
 4. To stop and remove containers:
    ```bash
