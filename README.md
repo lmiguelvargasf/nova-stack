@@ -39,6 +39,7 @@ A modern full-stack application template built for quick and efficient project s
 The primary prerequisites for this project are:
 - **[Docker Desktop][docker-desktop]:** Provides Docker Engine and Docker Compose.
 - **[Task][task]:** A task runner / build tool used for managing common development workflows.
+- **[pre-commit][]:** A tool for managing and running pre-commit hooks.
 
 #### Alternative Installation
 
@@ -65,6 +66,11 @@ task --version
    ```
 
 2. Edit the environment files (`.env`, `backend/.env`, and `frontend/.env.local`) to set the required secrets and configuration values (such as database URLs, API keys, etc.).
+
+3. Install pre-commit hooks:
+   ```bash
+   pre-commit install
+   ```
 
 ### Starting the Application
 
@@ -113,6 +119,7 @@ This project is licensed under the [MIT License](./LICENSE).
 [nextjs]: https://nextjs.org/
 [piccolo]: https://piccolo-orm.com/
 [postgresql]: https://www.postgresql.org/
+[pre-commit]: https://pre-commit.com/
 [python]: https://www.python.org/
 [tailwind]: https://tailwindcss.com/
 [task]: https://taskfile.dev/
