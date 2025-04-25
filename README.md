@@ -54,6 +54,7 @@ Verify the installation by running:
 docker --version
 docker compose version
 task --version
+pre-commit --version
 ```
 
 ### Environment Setup
