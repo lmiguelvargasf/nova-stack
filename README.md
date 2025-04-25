@@ -11,7 +11,7 @@
 
 A modern full-stack application template built for quick and efficient project setup.
 
-## 📑 Table of Contents
+## 📚 Table of Contents
 
 - [Tech Stack](#tech-stack)
 - [Getting Started](#getting-started)
@@ -95,7 +95,7 @@ pre-commit --version
    task docker:down
    ```
 
-## 📝 Development Tasks
+## ⚙️ Development Tasks
 
 This project uses [Task][] to simplify common development workflows. The main `Taskfile.yml` in the project root provides commands for:
 
