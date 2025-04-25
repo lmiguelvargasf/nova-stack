@@ -110,6 +110,10 @@ task --list
 
 Refer to the `README.md` files in the [`backend`](./backend/README.md) and [`frontend`](./frontend/README.md) directories for service-specific task details.
 
+## Releases
+
+All versioned changes are documented on the [GitHub Releases][releases] page.
+
 ## License
 
 This project is licensed under the [MIT License](./LICENSE).
@@ -121,7 +125,11 @@ This project is licensed under the [MIT License](./LICENSE).
 [piccolo]: https://piccolo-orm.com/
 [postgresql]: https://www.postgresql.org/
 [pre-commit]: https://pre-commit.com/
+[piccolo]: https://piccolo-orm.com/
+[postgresql]: https://www.postgresql.org/
+[pre-commit]: https://pre-commit.com/
 [python]: https://www.python.org/
+[releases]: https://github.com/lmiguelvargasf/nova-stack/releases
 [tailwind]: https://tailwindcss.com/
 [task]: https://taskfile.dev/
 [typescript]: https://www.typescriptlang.org/
