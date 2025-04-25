@@ -1,0 +1,30 @@
+changelog:
+  categories:
+    - title: "🚀 Features"
+      labels:
+        - "feature"
+    - title: "🐛 Bug Fixes"
+      labels:
+        - "bug"
+    - title: "🧰 Maintenance"
+      labels:
+        - "chore"
+        - "refactor"
+    - title: "📦 Dependencies"
+      labels:
+        - "dependencies"
+    - title: "📝 Documentation"
+      labels:
+        - "docs"
+  exclude:
+    labels:
+      - "skip-changelog"
+
+template: |
+  ## What's Changed
+
+  $CHANGES
+
+  ## Contributors
+
+  Thanks to our contributors: $CONTRIBUTORS
