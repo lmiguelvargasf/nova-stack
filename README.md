@@ -11,14 +11,14 @@
 
 A modern full-stack application template built for quick and efficient project setup.
 
-## Table of Contents
+## 📑 Table of Contents
 
 - [Tech Stack](#tech-stack)
 - [Getting Started](#getting-started)
 - [Development Tasks](#development-tasks)
 - [License](#license)
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 ### Backend
 - **[Python][python]** – Core programming language for backend.
@@ -32,7 +32,7 @@ A modern full-stack application template built for quick and efficient project s
 - **[Tailwind CSS][tailwind]** – Utility-first CSS framework for rapid UI development.
 - **[Chart.js][chartjs]** – Simple yet flexible JavaScript charting library.
 
-## Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 
@@ -95,7 +95,7 @@ pre-commit --version
    task docker:down
    ```
 
-## Development Tasks
+## 📝 Development Tasks
 
 This project uses [Task][] to simplify common development workflows. The main `Taskfile.yml` in the project root provides commands for:
 
@@ -110,11 +110,11 @@ task --list
 
 Refer to the `README.md` files in the [`backend`](./backend/README.md) and [`frontend`](./frontend/README.md) directories for service-specific task details.
 
-## Releases
+## 📦 Releases
 
 All versioned changes are documented on the [GitHub Releases][releases] page.
 
-## License
+## 📄 License
 
 This project is licensed under the [MIT License](./LICENSE).
 
