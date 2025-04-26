@@ -64,6 +64,11 @@ tasks:
     cmds:
       - "{{.BACKEND_TASK}} typecheck"
 
+  backend:create-user:
+    desc: Run backend create-user
+    cmds:
+      - "{{.BACKEND_TASK}} create-user"
+
   frontend:lint:
     desc: Run frontend lint
     cmds:
