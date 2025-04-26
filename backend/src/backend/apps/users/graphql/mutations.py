@@ -1,3 +1,5 @@
+from dataclasses import asdict
+
 import strawberry
 from graphql.error import GraphQLError
 from piccolo.apps.user.tables import BaseUser
@@ -18,12 +20,7 @@ class UserMutation:
                 f"User with username '{user_input.username}' already exists."
             )
 
-        user = BaseUser(
-            username=user_input.username,
-            first_name=user_input.first_name,
-            last_name=user_input.last_name,
-            email=user_input.email,
-        )
+        user = BaseUser(**asdict(user_input))
         await user.save()
 
         return UserType.from_model(user)
