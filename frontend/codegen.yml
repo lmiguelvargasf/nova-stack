@@ -1,29 +1,18 @@
-schema: http://localhost:8000/graphql  # URL to your GraphQL server (can be local dev server)
-documents: "src/graphql/**/*.{ts,tsx}"       # or wherever your GraphQL operations are. This example finds gql usage in Next pages.
+schema: ${NEXT_PUBLIC_GRAPHQL_ENDPOINT:http://backend:8000/graphql}
+documents: "src/**/*.graphql"
 generates:
-  lib/graphql/:
-    preset: "client"                   # Using the client preset (generates everything in one directory)
-    presetConfig:
-      gqlTagName: "gql"                # Tag used for GraphQL queries (the default is gql from @apollo/client)
-    plugins:
-      - "typescript"
-      - "typescript-operations"
-      - "typescript-react-apollo"
+  src/lib/graphql/:
+    preset: "client"
     config:
-      withHooks: true                  # Ensure hooks (useQuery, useMutation) are generated for each operation (true by default)&#8203;:contentReference[oaicite:25]{index=25}
-      dedupeOperationSuffix: true      # Optional: avoids duplicate suffix in generated hook names
-      # Best Practice: Generate string literal types for enums instead of TypeScript enums.
+      withHooks: true
+      dedupeOperationSuffix: true
       enumsAsTypes: true
-      # Best Practice: Ensure `__typename` is included and non-optional for cache normalization.
       skipTypename: false
       nonOptionalTypename: true
-
-      # Best Practice: Map custom scalars to TypeScript types.
-      # Uncomment and customize this section when you add custom scalars to your schema.
-      strictScalars: true # Uncomment if you want errors for unmapped scalars
+      strictScalars: true
       scalars:
-        ID: string # Or number if appropriate
-        DateTime: string # Or Date if you parse it
+        ID: string
+        DateTime: string
         UUID: string
         JSON: '{ [key: string]: any }'
         Upload: File
