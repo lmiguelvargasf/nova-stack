@@ -2,8 +2,7 @@
 
 import strawberry
 
-from .apps.users.graphql.mutations import UserMutation
-from .apps.users.graphql.queries import UserQuery
+from .apps.users.graphql import UserMutation, UserQuery
 
 
 @strawberry.type
