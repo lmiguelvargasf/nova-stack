@@ -13,10 +13,12 @@ A modern full-stack application template built for quick and efficient project s
 
 ## 📚 Table of Contents
 
-- [Tech Stack](#tech-stack)
-- [Getting Started](#getting-started)
-- [Development Tasks](#development-tasks)
-- [License](#license)
+- [Tech Stack](#️-tech-stack)
+- [Getting Started](#-getting-started)
+- [Development Tasks](#️-development-tasks)
+- [Troubleshooting](#-troubleshooting)
+- [Releases](#-releases)
+- [License](#-license)
 
 ## 🛠️ Tech Stack
 
@@ -109,6 +111,30 @@ task --list
 ```
 
 Refer to the `README.md` files in the [`backend`](./backend/README.md) and [`frontend`](./frontend/README.md) directories for service-specific task details.
+
+## 🧰 Troubleshooting
+
+### Frontend
+
+If the frontend container crashes when installing dependencies:
+
+1. Stop all services:
+   ```bash
+   task docker:down
+   ```
+2. Open a shell in a temporary frontend container:
+   ```bash
+   task frontend:bash
+   ```
+3. Inside the container, install the dependencies.
+4. Build all services again:
+   ```bash
+   task docker:build
+   ```
+5. Start all services:
+   ```bash
+   task docker:up
+   ```
 
 ## 📦 Releases
 
