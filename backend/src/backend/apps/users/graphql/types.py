@@ -10,6 +10,7 @@ class UserType:
     username: str
     first_name: str
     last_name: str
+    email: str
 
     @classmethod
     def from_model(cls, user: BaseUser) -> Self:
@@ -18,4 +19,5 @@ class UserType:
             username=user.username,
             first_name=user.first_name,
             last_name=user.last_name,
+            email=user.email,
         )

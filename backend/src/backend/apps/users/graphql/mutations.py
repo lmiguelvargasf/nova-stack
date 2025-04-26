@@ -13,6 +13,7 @@ class UserMutation:
         username: str,
         first_name: str,
         last_name: str,
+        email: str,
     ) -> UserType:
         existing_user = await BaseUser.objects().get(BaseUser.username == username)
         if existing_user:
@@ -22,6 +23,7 @@ class UserMutation:
             username=username,
             first_name=first_name,
             last_name=last_name,
+            email=email,
         )
         await user.save()
 
