@@ -86,14 +86,20 @@ pre-commit --version
    ```bash
    task docker:up
    ```
+   **Note:** *Wait for the frontend service to be fully running.*
 
-3. The services will be available at:
+3. Generate frontend code based on the backend API:
+   ```bash
+   task frontend:codegen
+   ```
+
+4. The services will be available at:
    - [Frontend Application](http://localhost:3000)
    - [Backend Admin UI](http://localhost:8000/admin/)
    - [Backend Health Check](http://localhost:8000/health)
    - [GraphQL Endpoint (GraphiQL)](http://localhost:8000/graphql)
 
-4. To stop and remove containers:
+5. To stop and remove containers:
    ```bash
    task docker:down
    ```
