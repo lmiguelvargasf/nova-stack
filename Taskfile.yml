@@ -119,6 +119,7 @@ tasks:
     cmds:
       - >-
         docker container run --rm -it \
+          --name frontend-deps-tool \
           -v "{{.PWD}}/frontend:/app" \
           -v node_modules:/app/node_modules \
           -w /app \
