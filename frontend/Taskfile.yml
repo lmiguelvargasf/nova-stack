@@ -67,3 +67,8 @@ tasks:
     desc: Run Storybook development server
     cmds:
       - pnpm run storybook:run
+
+  codegen:
+    desc: Run GraphQL code generation
+    cmds:
+      - pnpm run codegen
