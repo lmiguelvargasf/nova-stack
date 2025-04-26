@@ -6,6 +6,7 @@ This service is containerized via Docker Compose. See the [project root README](
 
 - [Backend Admin UI](http://localhost:8000/admin/)
 - [Backend Health Check](http://localhost:8000/health)
+- [GraphQL Endpoint (GraphiQL)](http://localhost:8000/graphql)
 
 ## Tooling
 
