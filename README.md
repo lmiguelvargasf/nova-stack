@@ -13,12 +13,12 @@ A modern full-stack application template built for quick and efficient project s
 
 ## 📚 Table of Contents
 
-- [Tech Stack](#-tech-stack)
-- [Getting Started](#-getting-started)
-- [Development Tasks](#-development-tasks)
-- [Troubleshooting](#-troubleshooting)
-- [Releases](#-releases)
-- [License](#-license)
+- [🛠️ Tech Stack](#️-tech-stack)
+- [🚀 Getting Started](#-getting-started)
+- [⚙️ Development Tasks](#️-development-tasks)
+- [🧰 Troubleshooting](#️-troubleshooting)
+- [📦 Releases](#-releases)
+- [📄 License](#-license)
 
 ## 🛠️ Tech Stack
 
