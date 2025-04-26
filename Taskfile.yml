@@ -104,6 +104,11 @@ tasks:
     cmds:
       - "{{.FRONTEND_TASK}} test:e2e"
 
+  frontend:codegen:
+    desc: Run frontend codegen
+    cmds:
+      - "{{.FRONTEND_TASK}} codegen"
+
   frontend:storybook:build:
     desc: Run frontend storybook:build
     cmds:
