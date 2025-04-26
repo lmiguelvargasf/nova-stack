@@ -54,4 +54,4 @@ node_modules/
 *storybook.log
 
 # GraphQL Codegen
-/lib/graphql/
+/src/lib/graphql/
