@@ -19,7 +19,9 @@
     "test:e2e:report": "playwright show-report --host=0.0.0.0",
     "test:e2e:ui": "playwright test --ui-host=0.0.0.0 --ui-port=9323",
     "storybook:build": "storybook build",
-    "storybook:run": "storybook dev -p 6006 --no-open"
+    "storybook:run": "storybook dev -p 6006 --no-open",
+    "codegen": "graphql-codegen --config codegen.yml",
+    "codegen:watch": "graphql-codegen --config codegen.yml --watch"
   },
   "dependencies": {
     "@apollo/client": "^3.13.8",
