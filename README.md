@@ -93,13 +93,19 @@ pre-commit --version
    task frontend:codegen
    ```
 
-4. The services will be available at:
+4. Create an initial admin user:
+   ```bash
+   task backend:create-user
+   ```
+   **Note:** *Follow the prompts. Use your email address as the username. You can leave the email field blank when prompted later.*
+
+5. The services will be available at:
    - [Frontend Application](http://localhost:3000)
    - [Backend Admin UI](http://localhost:8000/admin/)
    - [Backend Health Check](http://localhost:8000/health)
    - [GraphQL Endpoint (GraphiQL)](http://localhost:8000/graphql)
 
-5. To stop and remove containers:
+6. To stop and remove containers:
    ```bash
    task docker:down
    ```
