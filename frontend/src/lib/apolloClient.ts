@@ -1,6 +1,4 @@
-"use client";
-import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
-import React from "react";
+import { ApolloClient, InMemoryCache } from "@apollo/client";
 
 const client = new ApolloClient({
   uri:
@@ -9,9 +7,3 @@ const client = new ApolloClient({
 });
 
 export default client;
-
-export function ApolloClientProvider({
-  children,
-}: { children: React.ReactNode }) {
-  return React.createElement(ApolloProvider, { client, children });
-}
