@@ -36,3 +36,8 @@ tasks:
     desc: Run tests with coverage and HTML report
     cmds:
       - PICCOLO_CONF=backend.config.piccolo_test {{.PYTEST}} --cov-report html
+
+  create-user:
+    desc: Create a new user using Piccolo
+    cmds:
+      - piccolo user create
