@@ -91,6 +91,7 @@ pre-commit --version
    - [Frontend Application](http://localhost:3000)
    - [Backend Admin UI](http://localhost:8000/admin/)
    - [Backend Health Check](http://localhost:8000/health)
+   - [GraphQL Endpoint (GraphiQL)](http://localhost:8000/graphql)
 
 4. To stop and remove containers:
    ```bash
