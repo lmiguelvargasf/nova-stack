@@ -12,7 +12,7 @@ class UserType:
     last_name: str
 
     @classmethod
-    def from_piccolo(cls, user: BaseUser) -> Self:
+    def from_model(cls, user: BaseUser) -> Self:
         return cls(
             id=user.id,
             username=user.username,
