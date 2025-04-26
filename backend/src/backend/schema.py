@@ -15,7 +15,4 @@ class Mutation(UserMutation):
     pass
 
 
-schema = strawberry.Schema(
-    query=Query,
-    mutation=Mutation,
-)
+schema = strawberry.Schema(query=Query, mutation=Mutation)
