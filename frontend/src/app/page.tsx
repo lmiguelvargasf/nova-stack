@@ -95,10 +95,6 @@ export default async function Home() {
             ) : userData ? (
               <div className="text-sm">
                 <p>
-                  <strong>Name:</strong> {userData.firstName}{" "}
-                  {userData.lastName}
-                </p>
-                <p>
                   <strong>Username:</strong> {userData.username}
                 </p>
               </div>
