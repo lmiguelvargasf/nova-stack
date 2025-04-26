@@ -99,7 +99,7 @@ export default async function Home() {
                   {userData.lastName}
                 </p>
                 <p>
-                  <strong>Email:</strong> {userData.email}
+                  <strong>Username:</strong> {userData.username}
                 </p>
               </div>
             ) : (
