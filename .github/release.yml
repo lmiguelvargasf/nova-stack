@@ -19,7 +19,7 @@ changelog:
     - title: 📝 Documentation
       labels:
         - "documentation"
-    - title: 🔄 Other Changes
+    - title: 🔧 Other Changes
       labels:
         - "*"
   exclude:
