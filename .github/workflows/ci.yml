@@ -16,8 +16,32 @@ env:
   PICCOLO_CONF: backend.config.piccolo
 
 jobs:
+  generate-schema:
+    name: Generate GraphQL Schema
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Backend Dependencies
+        uses: ./.github/actions/backend-setup
+
+      - name: Generate GraphQL Schema
+        working-directory: ./backend
+        run: |
+          mkdir -p ../frontend/schema
+          uv run strawberry export-schema backend.schema:schema > ../frontend/schema/schema.graphql
+
+      - name: Upload Schema Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: graphql-schema
+          path: frontend/schema/schema.graphql
+          retention-days: 1
+
   frontend-lint-and-test:
     name: Frontend Lint and Test
+    needs: [generate-schema]
     runs-on: ubuntu-latest
     container:
       image: mcr.microsoft.com/playwright:v1.52.0-noble
@@ -53,23 +77,11 @@ jobs:
         working-directory: ./frontend
         run: pnpm install
 
-      - name: Backend Dependencies
-        uses: ./.github/actions/backend-setup
-
-      - name: Generate GraphQL Schema
-        working-directory: ./backend
-        run: |
-          # Generate GraphQL schema using Strawberry
-          mkdir -p ../frontend/schema
-          uv run python -c "
-          from backend.schema import schema
-          from pathlib import Path
-
-          # Write SDL schema to file
-          schema_sdl = str(schema)
-          Path('../frontend/schema/schema.graphql').write_text(schema_sdl)
-          print('Schema generated successfully!')
-          "
+      - name: Download Schema Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: graphql-schema
+          path: frontend/schema
 
       - name: Generate GraphQL Code
         working-directory: ./frontend
