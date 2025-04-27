@@ -156,8 +156,8 @@ If the frontend container crashes when installing dependencies:
 
 This project uses GitHub Actions for continuous integration and validation:
 
-- **CI Workflow**: Runs tests and linting on both frontend and backend
-- **PR Validation**: Enforces PR title conventions and size limits
+- **PR Validation**: Enforces PR title conventions and size limits.
+- **CI Workflow**: Runs tests and linting on both frontend and backend.
 
 For detailed information about our CI/CD workflows, see the [workflows documentation](.github/workflows/README.md).
 
