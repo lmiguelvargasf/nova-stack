@@ -1,37 +1,39 @@
-# CI Workflow
+# GitHub Workflows
+
+## CI
 
 This workflow runs automatically on:
 - Push to the `main` branch
 - Pull requests to the `main` branch
 
-## Jobs
+### Jobs
 
-### Generate GraphQL Schema
-- Builds the GraphQL schema from the backend
-- Uploads it as an artifact for frontend use
+#### Generate GraphQL Schema
+- Build the GraphQL schema from the backend
+- Upload it as an artifact for frontend use
 
-### Frontend Lint and Test
-- Runs in a Playwright container
-- Uses `pnpm` for dependency management with caching
-- Installs dependencies
-- Downloads the GraphQL schema artifact
-- Generates GraphQL code
-- Runs linting, format checking, and tests
+#### Frontend Lint and Test
+- Run in a Playwright container
+- Use `pnpm` for dependency management with caching
+- Install dependencies
+- Download the GraphQL schema artifact
+- Generate GraphQL code
+- Run linting, format checking, and tests
 
-### Backend Lint and Test
-- Uses a PostgreSQL service container
-- Installs Python dependencies
-- Runs `ruff` for linting and formatting
-- Runs `pyright` for type checking
-- Runs `pytest` for tests (without coverage)
+#### Backend Lint and Test
+- Use a PostgreSQL service container
+- Install Python dependencies
+- Run `ruff` for linting and formatting
+- Run `pyright` for type checking
+- Run `pytest` for tests (without coverage)
 
-# PR Validation Workflow
+## PR Validation
 
 This workflow runs on pull request events (opened, synchronized, reopened, edited).
 
-## Jobs
+### Jobs
 
-### Validate PR
-- Checks PR title follows semantic conventions (`feat`, `fix`, `docs`, etc.)
-- Validates PR size is 400 lines of code or less
-- Comments on PRs that exceed the size threshold
+#### Validate PR
+- Check PR title follows semantic conventions (`feat`, `fix`, `docs`, etc.)
+- Validate PR size is 400 lines of code or less
+- Comment on PRs that exceed the size threshold
