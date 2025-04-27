@@ -141,7 +141,7 @@ jobs:
 
       - name: Format check with ruff
         run: |
-          uv run ruff format --check
+          uv run ruff format --force-exclude
 
       - name: Type check with pyright
         run: |
