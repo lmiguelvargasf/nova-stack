@@ -75,6 +75,7 @@ jobs:
 
     env:
       POSTGRES_TEST_DB: test_db
+      POSTGRES_DB: test_db
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_HOST: postgres
@@ -114,4 +115,4 @@ jobs:
       - name: Run tests
         working-directory: ./backend
         run: |
-            uv run pytest
+            uv run pytest --no-cov
