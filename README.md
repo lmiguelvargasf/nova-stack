@@ -6,6 +6,7 @@
 ![Next.js](https://img.shields.io/badge/Next.js-15.x-black?style=for-the-badge&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-17-0074D9?style=for-the-badge&logo=postgresql&logoColor=white)
+![GraphQL](https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-0074D9?style=for-the-badge&logo=docker&logoColor=white)
 ![Task](https://img.shields.io/badge/Task-43B883?style=for-the-badge&logo=task&logoColor=white)
 
@@ -27,6 +28,7 @@ A modern full-stack application template built for quick and efficient project s
 - **[Litestar][litestar]** – High-performance ASGI framework for modern Python web apps.
 - **[Piccolo][piccolo]** – Async ORM and query builder with migration support.
 - **[PostgreSQL][postgresql]** – Advanced open-source relational database known for reliability.
+- **[GraphQL][graphql]** – API query language providing a more efficient alternative to REST.
 
 ### Frontend
 - **[TypeScript][typescript]** – Core language for frontend, adding static types to JavaScript.
@@ -159,6 +161,7 @@ This project is licensed under the [MIT License](./LICENSE).
 
 [chartjs]: https://www.chartjs.org/
 [docker-desktop]: https://www.docker.com/products/docker-desktop/
+[graphql]: https://graphql.org/
 [litestar]: https://litestar.dev/
 [nextjs]: https://nextjs.org/
 [piccolo]: https://piccolo-orm.com/
