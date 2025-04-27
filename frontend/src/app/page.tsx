@@ -10,28 +10,18 @@ export default async function Home() {
   let userData: GetUserByIdQuery["user"] | null = null;
   let fetchError: string | null = null;
   try {
-    const { data, error, errors } = await getClient().query<
+    const { data } = await getClient().query<
       GetUserByIdQuery,
       GetUserByIdQueryVariables
     >({
       query: GetUserByIdDocument,
       variables: { userId: "1" },
     });
-    if (errors) {
-      console.error("GraphQL Errors:", errors);
-      fetchError = `GraphQL error: ${errors.map((e) => e.message).join(", ")}`;
-    } else if (error) {
-      console.error("Apollo Client Error:", error);
-      fetchError = `Error fetching data: ${error.message}`;
-    } else {
-      userData = data?.user ?? null;
-    }
+    userData = data?.user ?? null;
   } catch (err) {
     console.error("Failed to fetch user data:", err);
-    fetchError = "An unexpected error occurred while fetching user data.";
-    if (err instanceof Error) {
-      fetchError = err.message;
-    }
+    fetchError =
+      err instanceof Error ? err.message : "An unexpected error occurred";
   }
 
   return (
