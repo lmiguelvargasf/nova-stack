@@ -6,8 +6,8 @@ tests involving database transactions are implemented.
 
 from typing import ClassVar
 
+from piccolo.apps.user.tables import BaseUser
 from piccolo.testing.test_case import AsyncTableTest
-from piccolo_admin.endpoints import BaseUser
 
 
 class TestBaseUser(AsyncTableTest):
