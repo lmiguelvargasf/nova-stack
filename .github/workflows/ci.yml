@@ -46,9 +46,34 @@ jobs:
         working-directory: ./frontend
         run: pnpm exec playwright install --with-deps chromium
 
+      - name: Generate GraphQL Schema
+        working-directory: ./backend
+        run: |
+          # Generate GraphQL schema using Strawberry
+          mkdir -p ../frontend/schema
+          uv run python -c "
+          from src.backend.app import app
+          from pathlib import Path
+          import strawberry
+
+          # Get the schema from the app
+          schema = app.get_schema()
+
+          # Write SDL schema to file
+          Path('../frontend/schema/schema.graphql').write_text(str(schema))
+
+          print('Schema generated successfully!')
+          "
+
       - name: Generate GraphQL Code
         working-directory: ./frontend
-        run: pnpm codegen
+        run: |
+          # Create a temporary codegen config file based on the existing one
+          cp codegen.yml codegen.ci.yml
+          # Replace the schema URL with the local file path
+          sed -i 's|schema:.*|schema: ./schema/schema.graphql|' codegen.ci.yml
+          # Run codegen with the temporary config
+          pnpm graphql-codegen --config codegen.ci.yml
 
       - name: Lint
         working-directory: ./frontend
