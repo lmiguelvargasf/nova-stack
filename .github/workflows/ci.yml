@@ -55,15 +55,12 @@ jobs:
         working-directory: ./frontend
         run: pnpm exec playwright install --with-deps chromium
 
+      - name: Backend Dependencies
+        uses: ./.github/actions/backend-setup
+
       - name: Generate GraphQL Schema
         working-directory: ./backend
         run: |
-          # Install uv
-          pip install uv
-
-          # Install backend dependencies
-          uv sync
-
           # Generate GraphQL schema using Strawberry
           mkdir -p ../frontend/schema
           uv run python -c "
@@ -124,16 +121,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.13'
-
-      - name: Install uv
-        run: pip install uv
-
-      - name: Install dependencies
-        run: uv sync
+      - name: Backend Dependencies
+        uses: ./.github/actions/backend-setup
 
       - name: Lint with ruff
         run: |
