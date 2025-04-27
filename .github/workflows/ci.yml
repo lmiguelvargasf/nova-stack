@@ -58,16 +58,12 @@ jobs:
           # Generate GraphQL schema using Strawberry
           mkdir -p ../frontend/schema
           uv run python -c "
-          from backend import app
+          from backend.schema import schema
           from pathlib import Path
-          import strawberry
-
-          # Get the schema from the app
-          schema = app.get_schema()
 
           # Write SDL schema to file
-          Path('../frontend/schema/schema.graphql').write_text(str(schema))
-
+          schema_sdl = str(schema)
+          Path('../frontend/schema/schema.graphql').write_text(schema_sdl)
           print('Schema generated successfully!')
           "
 
