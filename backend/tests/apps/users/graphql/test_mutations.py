@@ -4,56 +4,59 @@ from piccolo.apps.user.tables import BaseUser
 
 
 class TestUserMutations:
-    @patch.object(BaseUser, "objects")
+    @patch("src.backend.apps.users.graphql.mutations.BaseUser.objects")
     async def test_create_user_success(self, mock_objects, graphql_client):
-        # Mock that no user exists with this username
-        mock_objects.return_value.get = AsyncMock(return_value=None)
+        # Setup mock to return no existing user
+        mock_get = AsyncMock(return_value=None)
+        mock_objects.return_value.get = mock_get
 
-        # We'll patch the save method but not try to modify the ID
-        mock_save = AsyncMock()
+        # Create a test user with a controlled ID
+        with patch.object(BaseUser, "save", new_callable=AsyncMock) as mock_save:
+            # Set the ID directly in the BaseUser.__init__ method
+            original_init = BaseUser.__init__
 
-        with patch.object(BaseUser, "save", mock_save):
-            mutation = """
-            mutation CreateUser($userInput: UserInput!) {
-                createUser(userInput: $userInput) {
-                    id
-                    username
-                    firstName
-                    lastName
-                    email
+            def patched_init(self, *args, **kwargs):
+                original_init(self, *args, **kwargs)
+                self.id = 1
+
+            with patch.object(BaseUser, "__init__", patched_init):
+                # Execute the mutation
+                mutation = """
+                mutation CreateUser($userInput: UserInput!) {
+                    createUser(userInput: $userInput) {
+                        id
+                        username
+                        firstName
+                        lastName
+                        email
+                    }
                 }
-            }
-            """
-
-            variables = {
-                "userInput": {
-                    "username": "newuser",
-                    "firstName": "New",
-                    "lastName": "User",
-                    "email": "new@example.com",
+                """
+                variables = {
+                    "userInput": {
+                        "username": "newuser",
+                        "firstName": "New",
+                        "lastName": "User",
+                        "email": "new@example.com",
+                    }
                 }
-            }
+                result = await graphql_client.mutation(mutation, variables=variables)
 
-            result = await graphql_client.mutation(mutation, variables=variables)
+        assert "data" in result
+        assert "createUser" in result["data"]
+        assert result["data"]["createUser"] == {
+            "id": "1",
+            "username": "newuser",
+            "firstName": "New",
+            "lastName": "User",
+            "email": "new@example.com",
+        }
 
-            assert "errors" not in result, f"Errors in response: {result.get('errors')}"
-            assert "data" in result
-
-            user_data = result["data"]["createUser"]
-            assert user_data is not None
-            # Revert to expecting "DEFAULT" as the ID in the test environment
-            assert user_data["id"] == "DEFAULT"
-            assert user_data["username"] == "newuser"
-            assert user_data["firstName"] == "New"
-            assert user_data["lastName"] == "User"
-            assert user_data["email"] == "new@example.com"
-
-            # Verify that save was called
-            assert mock_save.called
+        mock_get.assert_called_once()
+        mock_save.assert_called_once()
 
     @patch.object(BaseUser, "objects")
     async def test_create_user_already_exists(self, mock_objects, graphql_client):
-        # Mock that a user already exists with this username
         existing_user = BaseUser(
             id=1,
             username="existinguser",
