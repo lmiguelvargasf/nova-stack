@@ -20,7 +20,6 @@ class TestUserMutations:
                 self.id = 1
 
             with patch.object(BaseUser, "__init__", patched_init):
-                # Execute the mutation
                 mutation = """
                 mutation CreateUser($userInput: UserInput!) {
                     createUser(userInput: $userInput) {
