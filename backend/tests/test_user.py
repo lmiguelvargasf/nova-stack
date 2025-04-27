@@ -6,8 +6,8 @@ tests involving database transactions are implemented.
 
 from typing import ClassVar
 
+from piccolo.apps.user.tables import BaseUser
 from piccolo.testing.test_case import AsyncTableTest
-from piccolo_admin.endpoints import BaseUser
 
 
 class TestBaseUser(AsyncTableTest):
@@ -26,5 +26,7 @@ class TestBaseUser(AsyncTableTest):
         retrieved_user = await BaseUser.objects().get(
             BaseUser.username == test_username
         )
+
+        assert retrieved_user is not None
         assert retrieved_user.id == user.id
         assert retrieved_user.username == test_username

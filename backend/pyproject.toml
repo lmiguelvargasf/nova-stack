@@ -13,6 +13,7 @@ dependencies = [
     "piccolo-admin>=1.9.1",
     "piccolo[postgres]>=1.24.2",
     "pydantic-settings>=2.8.1",
+    "strawberry-graphql>=0.266.0",
 ]
 
 [build-system]
@@ -25,16 +26,19 @@ dev = [
     "pytest>=8.3.5",
     "pytest-asyncio>=0.26.0",
     "pytest-cov>=6.1.1",
+    "pytest-mock>=3.14.0",
     "ruff>=0.11.7",
+    "strawberry-graphql[debug-server]>=0.266.0",
 ]
 
 [tool.ruff]
 line-length = 88
 target-version = "py313"
-
 [tool.ruff.lint]
 select = ["E", "F", "B", "I", "UP", "RUF"]
 ignore = ["E501"]
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

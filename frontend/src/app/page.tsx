@@ -1,6 +1,29 @@
+import { getClient } from "@/lib/apolloClient.server";
+import {
+  GetUserByIdDocument,
+  type GetUserByIdQuery,
+  type GetUserByIdQueryVariables,
+} from "@/lib/graphql/graphql";
 import Image from "next/image";
 
-export default function Home() {
+export default async function Home() {
+  let userData: GetUserByIdQuery["user"] | null = null;
+  let fetchError: string | null = null;
+  try {
+    const { data } = await getClient().query<
+      GetUserByIdQuery,
+      GetUserByIdQueryVariables
+    >({
+      query: GetUserByIdDocument,
+      variables: { userId: "1" },
+    });
+    userData = data?.user ?? null;
+  } catch (err) {
+    console.error("Failed to fetch user data:", err);
+    fetchError =
+      err instanceof Error ? err.message : "An unexpected error occurred";
+  }
+
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
@@ -49,6 +72,26 @@ export default function Home() {
           >
             Read our docs
           </a>
+        </div>
+
+        <div className="mt-8 w-full border-t pt-8">
+          <h2 className="text-xl font-semibold mb-4 text-center sm:text-left">
+            Using GraphQL
+          </h2>
+          <div className="border p-4 rounded bg-black/[.05] dark:bg-white/[.06]">
+            <h3 className="text-lg font-semibold mb-2">User Data (ID: 1)</h3>
+            {fetchError ? (
+              <p className="text-red-500">Error: {fetchError}</p>
+            ) : userData ? (
+              <div className="text-sm">
+                <p>
+                  <strong>Username:</strong> {userData.username}
+                </p>
+              </div>
+            ) : (
+              <p>User with ID 1 is not created or could not be found.</p>
+            )}
+          </div>
         </div>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
