@@ -74,12 +74,7 @@ jobs:
       - name: Generate GraphQL Code
         working-directory: ./frontend
         run: |
-          # Create a temporary codegen config file based on the existing one
-          cp codegen.yml codegen.ci.yml
-          # Replace the schema URL with the local file path
-          sed -i 's|schema:.*|schema: ./schema/schema.graphql|' codegen.ci.yml
-          # Run codegen with the temporary config
-          pnpm graphql-codegen --config codegen.ci.yml
+          pnpm codegen
 
       - name: Lint
         working-directory: ./frontend
