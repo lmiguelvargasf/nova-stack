@@ -46,6 +46,9 @@ export default defineConfig({
         "vitest.workspace.ts",
         ".storybook/**",
         "**/storybook-static/**",
+        // GraphQL files
+        "src/lib/graphql/**",
+        "schema/schema.graphql",
       ],
     },
   },

@@ -31,5 +31,5 @@
 ## Additional Context
 <!-- Add any other information that might help reviewers, such as challenges faced, trade-offs made, or future work planned. Write "N/A" if not applicable. -->
 
-## Reviewer Notes (optional)
+## Reviewer Notes
 <!-- Suggest specific areas for reviewers to focus on, e.g., "Check the new API endpoint logic in `file.py`." Write "N/A" if not applicable. -->

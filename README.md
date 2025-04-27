@@ -18,6 +18,7 @@ A modern full-stack application template built for quick and efficient project s
 - [Getting Started](#-getting-started)
 - [Development Tasks](#️-development-tasks)
 - [Troubleshooting](#-troubleshooting)
+- [CI/CD Workflows](#-cicd-workflows)
 - [Releases](#-releases)
 - [License](#-license)
 
@@ -150,6 +151,15 @@ If the frontend container crashes when installing dependencies:
    ```bash
    task docker:up
    ```
+
+## 🔄 CI/CD Workflows
+
+This project uses GitHub Actions for continuous integration and validation:
+
+- **PR Validation**: Enforce PR title conventions and limit PR size.
+- **CI Workflow**: Run tests and linting on both frontend and backend.
+
+For detailed information about our CI/CD workflows, see the [workflows documentation](.github/workflows/README.md).
 
 ## 📦 Releases
 

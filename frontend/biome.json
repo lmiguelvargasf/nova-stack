@@ -13,7 +13,9 @@
       ".next",
       "coverage",
       "playwright-report",
-      "storybook-static"
+      "storybook-static",
+      "src/lib/graphql",
+      "schema/schema.graphql"
     ]
   },
   "formatter": {
