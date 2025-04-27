@@ -19,6 +19,8 @@ jobs:
   frontend-lint-and-test:
     name: Frontend Lint and Test
     runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.52.0-noble
 
     steps:
       - uses: actions/checkout@v4
@@ -26,7 +28,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '20'
 
       - name: Setup PNPM
         uses: pnpm/action-setup@v3
@@ -50,10 +52,6 @@ jobs:
       - name: Install Dependencies
         working-directory: ./frontend
         run: pnpm install
-
-      - name: Install Playwright Browsers
-        working-directory: ./frontend
-        run: pnpm exec playwright install --with-deps chromium
 
       - name: Backend Dependencies
         uses: ./.github/actions/backend-setup
