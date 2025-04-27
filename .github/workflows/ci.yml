@@ -58,13 +58,6 @@ jobs:
       - name: Backend Dependencies
         uses: ./.github/actions/backend-setup
 
-      - name: Start Backend Server
-        run: |
-          exec uv run litestar run --host 0.0.0.0 &
-
-      - name: Wait for GraphQL Endpoint
-        run: npx wait-on http://localhost:8000/graphql --timeout 60s
-
       - name: Generate GraphQL Schema
         working-directory: ./backend
         run: |
