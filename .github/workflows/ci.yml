@@ -58,7 +58,7 @@ jobs:
           # Generate GraphQL schema using Strawberry
           mkdir -p ../frontend/schema
           uv run python -c "
-          from src.backend.app import app
+          from backend.app import app
           from pathlib import Path
           import strawberry
 
