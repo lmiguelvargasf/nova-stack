@@ -1,5 +1,5 @@
 name: "Backend Setup"
-description: "Install Python dependencies and sync Piccolo"
+description: "Install Python dependencies"
 inputs:
   working-directory:
     description: "Directory containing the backend code"
