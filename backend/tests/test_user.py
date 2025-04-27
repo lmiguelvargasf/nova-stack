@@ -26,5 +26,7 @@ class TestBaseUser(AsyncTableTest):
         retrieved_user = await BaseUser.objects().get(
             BaseUser.username == test_username
         )
+
+        assert retrieved_user is not None
         assert retrieved_user.id == user.id
         assert retrieved_user.username == test_username
