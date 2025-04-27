@@ -42,10 +42,6 @@ jobs:
         working-directory: ./frontend
         run: pnpm install
 
-      - name: Install Playwright Browsers
-        working-directory: ./frontend
-        run: pnpm exec playwright install --with-deps chromium
-
       - name: Generate GraphQL Schema
         working-directory: ./backend
         run: |
