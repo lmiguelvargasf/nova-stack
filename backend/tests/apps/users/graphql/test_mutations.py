@@ -4,7 +4,7 @@ from piccolo.apps.user.tables import BaseUser
 
 
 class TestUserMutations:
-    @patch("src.backend.apps.users.graphql.mutations.BaseUser.objects")
+    @patch.object(BaseUser, "objects")
     async def test_create_user_success(self, mock_objects, graphql_client):
         # Setup mock to return no existing user
         mock_get = AsyncMock(return_value=None)
