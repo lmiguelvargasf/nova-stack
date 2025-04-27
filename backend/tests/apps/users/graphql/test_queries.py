@@ -7,7 +7,7 @@ from piccolo.apps.user.tables import BaseUser
 @pytest.mark.asyncio
 class TestUserQueries:
     @patch.object(BaseUser, "objects")
-    async def test_get_user_by_id(self, mock_objects, test_client):
+    async def test_get_user_by_id(self, mock_objects, graphql_client):
         mock_user = BaseUser(
             id=1,
             username="testuser",
@@ -29,13 +29,8 @@ class TestUserQueries:
         }
         """
 
-        response = await test_client.post(
-            "/graphql", json={"query": query, "variables": {"id": "1"}}
-        )
+        result = await graphql_client.query(query, variables={"id": "1"})
 
-        assert response.status_code == 200
-
-        result = response.json()
         assert "errors" not in result
         assert "data" in result
 
@@ -51,7 +46,7 @@ class TestUserQueries:
         assert mock_objects.return_value.get.call_count == 1
 
     @patch.object(BaseUser, "objects")
-    async def test_get_user_by_id_not_found(self, mock_objects, test_client):
+    async def test_get_user_by_id_not_found(self, mock_objects, graphql_client):
         mock_objects.return_value.get = AsyncMock(return_value=None)
 
         query = """
@@ -63,13 +58,8 @@ class TestUserQueries:
         }
         """
 
-        response = await test_client.post(
-            "/graphql", json={"query": query, "variables": {"id": "999"}}
-        )
+        result = await graphql_client.query(query, variables={"id": "999"})
 
-        assert response.status_code == 200
-
-        result = response.json()
         assert "errors" in result
         assert len(result["errors"]) == 1
         assert "User with id 999 not found" in result["errors"][0]["message"]
