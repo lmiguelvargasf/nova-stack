@@ -58,6 +58,27 @@ jobs:
     name: Backend Lint and Test
     runs-on: ubuntu-latest
 
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: test_db
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    env:
+      DATABASE_URL: postgres://postgres:postgres@localhost:5432/test_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: test_db
+
     steps:
       - uses: actions/checkout@v4
 
@@ -79,28 +100,24 @@ jobs:
         working-directory: ./backend
         run: |
           source .venv/bin/activate
-          uv pip install -e .[dev]
+          uv sync
 
       - name: Lint with ruff
         working-directory: ./backend
         run: |
-          source .venv/bin/activate
-          ruff check src tests
+          uv run ruff check --force-exclude --fix
 
       - name: Format check with ruff
         working-directory: ./backend
         run: |
-          source .venv/bin/activate
-          ruff format --check src tests
+          uv run ruff format --check
 
       - name: Type check with pyright
         working-directory: ./backend
         run: |
-          source .venv/bin/activate
-          pyright
+          uv run pyright
 
       - name: Run tests
         working-directory: ./backend
         run: |
-          source .venv/bin/activate
-          pytest
+          PICCOLO_CONF=backend.config.piccolo_test uv run pytest
