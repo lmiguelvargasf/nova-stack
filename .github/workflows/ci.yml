@@ -58,9 +58,6 @@ jobs:
       - name: Backend Dependencies
         uses: ./.github/actions/backend-setup
 
-      - name: Run Piccolo Migrations
-        run: uv run python -m piccolo migrations forwards all
-
       - name: Generate GraphQL Schema
         working-directory: ./backend
         run: |
