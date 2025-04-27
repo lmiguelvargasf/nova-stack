@@ -79,6 +79,7 @@ jobs:
       POSTGRES_PASSWORD: postgres
       POSTGRES_HOST: postgres
       POSTGRES_PORT: 5432
+      PICCOLO_CONF: backend.config.piccolo_test
 
     steps:
       - uses: actions/checkout@v4
@@ -113,4 +114,4 @@ jobs:
       - name: Run tests
         working-directory: ./backend
         run: |
-          PICCOLO_CONF=backend.config.piccolo_test uv run pytest
+            uv run pytest
