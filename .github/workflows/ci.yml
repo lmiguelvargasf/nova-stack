@@ -91,7 +91,7 @@ jobs:
 
       - name: Build for E2E tests
         working-directory: ./frontend
-        run: pnpm build
+        run: pnpm next build --no-lint
 
       - name: Run E2E Tests
         working-directory: ./frontend
