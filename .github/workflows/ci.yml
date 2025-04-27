@@ -94,7 +94,7 @@ jobs:
 
       - name: Format Check
         working-directory: ./frontend
-        run: pnpm biome check --no-errors-on-unmatched
+        run: pnpm check
 
       - name: Run Tests
         working-directory: ./frontend
