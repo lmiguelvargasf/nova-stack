@@ -1,5 +1,3 @@
-# Pull Request Template
-
 ## What does this PR do?
 <!-- Briefly describe the purpose of your changes in 1-3 sentences. Include what problem it solves or what feature it adds. -->
 
