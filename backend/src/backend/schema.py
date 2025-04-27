@@ -1,5 +1,3 @@
-# src/backend/schema.py
-
 import strawberry
 
 from .apps.users.graphql import UserMutation, UserQuery
