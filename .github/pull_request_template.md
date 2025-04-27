@@ -2,7 +2,7 @@
 <!-- Briefly describe the purpose of your changes in 1-3 sentences. Include what problem it solves or what feature it adds. -->
 
 ## Related Issues
-<!-- Link any related issues (e.g., "Fixes #123", "Related to #456"). Write "None" if there are none. -->
+<!-- Link any related issues (e.g., "Fixes #123", "Related to #456"). Write "N/A" if there are none. -->
 
 ## Type of Change
 <!-- Check the relevant option(s) with an "x". Multiple selections are okay. -->
@@ -29,7 +29,7 @@
 - [ ] My changes do not introduce new warnings or errors
 
 ## Additional Context
-<!-- Add any other information that might help reviewers, such as challenges faced, trade-offs made, or future work planned. Write "None" if not applicable. -->
+<!-- Add any other information that might help reviewers, such as challenges faced, trade-offs made, or future work planned. Write "N/A" if not applicable. -->
 
 ## Reviewer Notes (optional)
-<!-- Suggest specific areas for reviewers to focus on, e.g., "Please check the new API endpoint logic in `file.py`." -->
+<!-- Suggest specific areas for reviewers to focus on, e.g., "Please check the new API endpoint logic in `file.py`." Write "N/A" if not applicable. -->
