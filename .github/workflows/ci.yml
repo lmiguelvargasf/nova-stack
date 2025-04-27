@@ -7,13 +7,13 @@ on:
     branches: [main]
 
 env:
-  POSTGRES_DB: test_db
+  POSTGRES_DB: db
   POSTGRES_USER: postgres
   POSTGRES_PASSWORD: postgres
   POSTGRES_HOST: localhost
   POSTGRES_PORT: 5432
-  POSTGRES_TEST_DB: test_db
-  PICCOLO_CONF: backend.config.piccolo_test
+  POSTGRES_TEST_DB: db_test
+  PICCOLO_CONF: backend.config.piccolo
 
 jobs:
   frontend-lint-and-test:
@@ -57,6 +57,9 @@ jobs:
 
       - name: Backend Dependencies
         uses: ./.github/actions/backend-setup
+
+      - name: Run Piccolo Migrations
+        run: uv run piccolo migrations forwards all
 
       - name: Generate GraphQL Schema
         working-directory: ./backend
