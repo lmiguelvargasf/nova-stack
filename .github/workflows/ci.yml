@@ -49,6 +49,12 @@ jobs:
       - name: Generate GraphQL Schema
         working-directory: ./backend
         run: |
+          # Install uv
+          pip install uv
+
+          # Install backend dependencies
+          uv sync
+
           # Generate GraphQL schema using Strawberry
           mkdir -p ../frontend/schema
           uv run python -c "
