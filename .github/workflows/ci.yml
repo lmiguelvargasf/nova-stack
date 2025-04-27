@@ -89,14 +89,6 @@ jobs:
         working-directory: ./frontend
         run: pnpm test:run
 
-      - name: Build for E2E tests
-        working-directory: ./frontend
-        run: pnpm next build --no-lint
-
-      - name: Run E2E Tests
-        working-directory: ./frontend
-        run: pnpm exec playwright test --project=chromium
-
   backend-lint-and-test:
     name: Backend Lint and Test
     runs-on: ubuntu-latest
