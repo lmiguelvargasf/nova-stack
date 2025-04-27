@@ -6,6 +6,15 @@ on:
   pull_request:
     branches: [main]
 
+env:
+  POSTGRES_DB: test_db
+  POSTGRES_USER: postgres
+  POSTGRES_PASSWORD: postgres
+  POSTGRES_HOST: localhost
+  POSTGRES_PORT: 5432
+  POSTGRES_TEST_DB: test_db
+  PICCOLO_CONF: backend.config.piccolo_test
+
 jobs:
   frontend-lint-and-test:
     name: Frontend Lint and Test
@@ -97,9 +106,9 @@ jobs:
       postgres:
         image: postgres:17
         env:
-          POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: postgres
-          POSTGRES_DB: test_db
+          POSTGRES_USER: ${{ env.POSTGRES_USER }}
+          POSTGRES_PASSWORD: ${{ env.POSTGRES_PASSWORD }}
+          POSTGRES_DB: ${{ env.POSTGRES_DB }}
         ports:
           - 5432:5432
         options: >-
@@ -107,15 +116,6 @@ jobs:
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
-
-    env:
-      POSTGRES_DB: test_db
-      POSTGRES_USER: postgres
-      POSTGRES_TEST_DB: test_db
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_HOST: localhost
-      POSTGRES_PORT: 5432
-      PICCOLO_CONF: backend.config.piccolo_test
 
     steps:
       - uses: actions/checkout@v4
