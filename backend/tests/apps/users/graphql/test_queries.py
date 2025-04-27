@@ -1,11 +1,9 @@
-from unittest.mock import AsyncMock, patch
-
 from piccolo.apps.user.tables import BaseUser
 
 
 class TestUserQueries:
-    @patch.object(BaseUser, "objects")
-    async def test_get_user_by_id(self, mock_objects, graphql_client):
+    async def test_get_user_by_id(self, mocker, graphql_client):
+        mock_objects = mocker.patch.object(BaseUser, "objects")
         mock_user = BaseUser(
             id=1,
             username="testuser",
@@ -13,7 +11,7 @@ class TestUserQueries:
             last_name="User",
             email="test@example.com",
         )
-        mock_objects.return_value.get = AsyncMock(return_value=mock_user)
+        mock_objects.return_value.get = mocker.AsyncMock(return_value=mock_user)
 
         query = """
         query GetUser($id: ID!) {
@@ -34,18 +32,20 @@ class TestUserQueries:
 
         user_data = result["data"]["user"]
         assert user_data is not None
-        assert user_data["id"] == "1"
-        assert user_data["username"] == "testuser"
-        assert user_data["firstName"] == "Test"
-        assert user_data["lastName"] == "User"
-        assert user_data["email"] == "test@example.com"
+        expected_data = {
+            "id": "1",
+            "username": "testuser",
+            "firstName": "Test",
+            "lastName": "User",
+            "email": "test@example.com",
+        }
+        assert user_data == expected_data
 
-        assert mock_objects.return_value.get.called
-        assert mock_objects.return_value.get.call_count == 1
+        mock_objects.return_value.get.assert_called_once()
 
-    @patch.object(BaseUser, "objects")
-    async def test_get_user_by_id_not_found(self, mock_objects, graphql_client):
-        mock_objects.return_value.get = AsyncMock(return_value=None)
+    async def test_get_user_by_id_not_found(self, mocker, graphql_client):
+        mock_objects = mocker.patch.object(BaseUser, "objects")
+        mock_objects.return_value.get = mocker.AsyncMock(return_value=None)
 
         query = """
         query GetUser($id: ID!) {
@@ -61,3 +61,4 @@ class TestUserQueries:
         assert "errors" in result
         assert len(result["errors"]) == 1
         assert "User with id 999 not found" in result["errors"][0]["message"]
+        mock_objects.return_value.get.assert_called_once()
