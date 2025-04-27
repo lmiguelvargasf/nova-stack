@@ -48,6 +48,7 @@ export default defineConfig({
         "**/storybook-static/**",
         // GraphQL files
         "src/lib/graphql/**",
+        "schema/schema.graphql",
       ],
     },
   },
