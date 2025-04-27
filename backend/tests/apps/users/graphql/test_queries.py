@@ -1,10 +1,8 @@
 from unittest.mock import AsyncMock, patch
 
-import pytest
 from piccolo.apps.user.tables import BaseUser
 
 
-@pytest.mark.asyncio
 class TestUserQueries:
     @patch.object(BaseUser, "objects")
     async def test_get_user_by_id(self, mock_objects, graphql_client):
