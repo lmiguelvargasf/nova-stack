@@ -52,5 +52,7 @@ omit = [
 ]
 
 [tool.pyrefly]
-search-path = ["src"]
 python-version = "3.13"
+project-includes = ["src"]
+search-path = ["src"]
+site-package-path = [".venv/lib/python3.13/site-packages"]
