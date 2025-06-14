@@ -52,3 +52,5 @@ omit = [
 ]
 
 [tool.pyrefly]
+search-path = ["src"]
+python-version = "3.13"
