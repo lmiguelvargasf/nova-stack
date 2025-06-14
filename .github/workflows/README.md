@@ -35,5 +35,5 @@ This workflow runs automatically on:
 - Use a PostgreSQL service container
 - Install Python dependencies
 - Run `ruff` for linting and formatting
-- Run `pyright` for type checking
+- Run `pyrefly` for type checking
 - Run `pytest` for tests (without coverage)
