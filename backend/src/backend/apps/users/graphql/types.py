@@ -1,3 +1,4 @@
+from dataclasses import dataclass
 from typing import Self
 
 import strawberry
@@ -5,6 +6,7 @@ from piccolo.apps.user.tables import BaseUser
 
 
 @strawberry.type
+@dataclass
 class UserType:
     id: strawberry.ID
     username: str

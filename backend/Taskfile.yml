@@ -18,9 +18,9 @@ tasks:
       - "{{.RUFF}} format --force-exclude"
 
   typecheck:
-    desc: Run pyright for static type checking
+    desc: Run pyrefly for static type checking
     cmds:
-      - uv run pyright
+      - uv run pyrefly check
 
   test:
     desc: Run tests without coverage

@@ -22,7 +22,7 @@ build-backend = "hatchling.build"
 
 [dependency-groups]
 dev = [
-    "pyright>=1.1.400",
+    "pyrefly>=0.19.1",
     "pytest>=8.3.5",
     "pytest-asyncio>=0.26.0",
     "pytest-cov>=6.1.1",
@@ -51,10 +51,8 @@ omit = [
     "src/backend/config/piccolo*.py",
 ]
 
-[tool.pyright]
-include = ["src"]
-exclude = ["**/__pycache__", "**/.venv"]
-venvPath = "."
-venv = ".venv"
-typeCheckingMode = "basic"
-pythonVersion = "3.13"
+[tool.pyrefly]
+python-version = "3.13"
+project-includes = ["src"]
+search-path = ["src"]
+site-package-path = [".venv/lib/python3.13/site-packages"]

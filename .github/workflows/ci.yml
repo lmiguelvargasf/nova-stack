@@ -133,8 +133,8 @@ jobs:
       - name: Format check with ruff
         run: uv run ruff format --force-exclude
 
-      - name: Type check with pyright
-        run: uv run pyright
+      - name: Type check with pyrefly
+        run: uv run pyrefly check
 
       - name: Run tests
         run: uv run pytest --no-cov
