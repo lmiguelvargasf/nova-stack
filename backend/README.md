@@ -15,7 +15,7 @@ The following tools are used in this project:
 - **[ruff][]:** Used for code linting and formatting.
 - **[pytest][]:** Used for running tests.
 - **[pytest-cov][]:** Used for measuring test coverage.
-- **[pyright][]:** Used for static type checking.
+- **[pyrefly][]:** Used for static type checking.
 
 
 ## Development Tasks
@@ -28,7 +28,7 @@ To see all available tasks and their descriptions, run:
 task --list
 ```
 
-[pyright]: https://microsoft.github.io/pyright/
+[pyrefly]: https://pyrefly.org/
 [pytest]: https://docs.pytest.org/
 [pytest-cov]: https://pytest-cov.readthedocs.io/en/latest/readme.html
 [ruff]: https://docs.astral.sh/ruff/
